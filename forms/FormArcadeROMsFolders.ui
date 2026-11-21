@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeROMsFolders</class>
+  <widget class="QWidget" name="FormArcadeROMsFolders">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>640</width><height>392</height></rect></property>
+    <property name="windowTitle"><string>MAME and Arcade ROMs Folders</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeROMsFolders</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsSingle</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElPanel" name="PanelSystemsSelect">
+      <property name="geometry"><rect><x>0</x><y>0</y><width>640</width><height>108</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="QTreeView" name="SystemSelector">
+        <property name="geometry"><rect><x>8</x><y>8</y><width>642</width><height>92</height></rect></property>
+        <property name="vclTag" stdset="0"><number>-1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>9</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>351</y><width>640</width><height>41</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#dddddd</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonCancel">
+        <property name="geometry"><rect><x>543</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Close</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelFoldersList">
+      <property name="geometry"><rect><x>8</x><y>136</y><width>624</width><height>207</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="QPlainTextEdit" name="FoldersList">
+        <property name="geometry"><rect><x>0</x><y>0</y><width>622</width><height>205</height></rect></property>
+        <property name="vclAlign" stdset="0"><string notr="true">alClient</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TMemo</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>13</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelSystemTitle">
+      <property name="geometry"><rect><x>0</x><y>108</y><width>640</width><height>16</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#e6e6e6</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelSystemTitle">
+        <property name="geometry"><rect><x>8</x><y>0</y><width>624</width><height>16</height></rect></property>
+        <property name="text"><string notr="true">SYSTEM TITLE</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">True</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelSystemTitleBottom">
+      <property name="geometry"><rect><x>0</x><y>124</y><width>640</width><height>12</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#e6e6e6</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

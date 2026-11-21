@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeFiltersExtra</class>
+  <widget class="QWidget" name="FormArcadeFiltersExtra">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>621</width><height>411</height></rect></property>
+    <property name="windowTitle"><string>Miscellaneous Filters</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeFiltersExtra</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsToolWindow</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElLabel" name="LabelControlType">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>418</x><y>56</y><width>107</width><height>16</height></rect></property>
+      <property name="text"><string>MAME Control Type</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelInterfaceType">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>213</x><y>56</y><width>130</width><height>16</height></rect></property>
+      <property name="text"><string>Interface Type (Controls)</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelAudioType">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>8</x><y>56</y><width>60</width><height>16</height></rect></property>
+      <property name="text"><string>Audio Type</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelGamesROMs">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>418</x><y>8</y><width>67</width><height>16</height></rect></property>
+      <property name="text"><string>Game ROMs</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelDeviceROMs">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>213</x><y>8</y><width>71</width><height>16</height></rect></property>
+      <property name="text"><string>Device ROMs</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelBios">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>8</x><y>8</y><width>61</width><height>16</height></rect></property>
+      <property name="text"><string>BIOS ROMs</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelSTVMultiSlot">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>24</x><y>199</y><width>108</width><height>19</height></rect></property>
+      <property name="text"><string>Multi-slot machines</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelNeoGeoMVS">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>24</x><y>167</y><width>108</width><height>19</height></rect></property>
+      <property name="text"><string>Multi-slot machines</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelScreenOrientation">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>8</x><y>104</y><width>99</width><height>16</height></rect></property>
+      <property name="text"><string>Screen Orientation</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelSaveState">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>213</x><y>104</y><width>54</width><height>16</height></rect></property>
+      <property name="text"><string>Save State</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelSpecialList">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>418</x><y>104</y><width>59</width><height>16</height></rect></property>
+      <property name="text"><string>Special List</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelHideMAMESoftlist_vgmplay">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>24</x><y>231</y><width>160</width><height>19</height></rect></property>
+      <property name="text"><string>MAME Software List: vgmplay</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelCocktail">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>213</x><y>152</y><width>44</width><height>16</height></rect></property>
+      <property name="text"><string>Cocktail</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelArtworkRequired">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>418</x><y>152</y><width>138</width><height>16</height></rect></property>
+      <property name="text"><string>External Artwork Required</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="QCheckBox" name="FilterGamesMainCPU">
+      <property name="geometry"><rect><x>8</x><y>336</y><width>144</width><height>20</height></rect></property>
+      <property name="text"><string>Enable Main CPU Filter</string></property>
+      <property name="toolTip"><string>Enable it so you can filter MAME games by main CPU</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>370</y><width>621</width><height>41</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#dfdfdf</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonOk">
+        <property name="geometry"><rect><x>427</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Apply</string></property>
+        <property name="toolTip"><string>Close and update filters</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonOkClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonCancel">
+        <property name="geometry"><rect><x>524</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="toolTip"><string>Close without changing filters</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">2</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonOkClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonDefaultOptions">
+        <property name="geometry"><rect><x>8</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Default</string></property>
+        <property name="toolTip"><string>Reset all misc filters to default settings</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonDefaultOptionsClick</string></property>
+      </widget>
+    </widget>
+    <widget class="QComboBox" name="InterfaceType">
+      <property name="geometry"><rect><x>213</x><y>73</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Classic (Stick/Buttons)</string></property></item>
+      <item><property name="text"><string>Mechanical (Pinball, etc)</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="AudioType">
+      <property name="geometry"><rect><x>8</x><y>73</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List All</string></property></item>
+      <item><property name="text"><string>Standard Audio</string></property></item>
+      <item><property name="text"><string>Discrete Audio</string></property></item>
+      <item><property name="text"><string>Flac/Wave Sample Audio</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="GamesROMs">
+      <property name="geometry"><rect><x>418</x><y>25</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List All</string></property></item>
+      <item><property name="text"><string>Games With ROMs (any ROM)</string></property></item>
+      <item><property name="text"><string>Games With No ROMs/CHDs</string></property></item>
+      <item><property name="text"><string>Games With No Main Set</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QCheckBox" name="HideDeviceSets">
+      <property name="geometry"><rect><x>305</x><y>6</y><width>103</width><height>20</height></rect></property>
+      <property name="text"><string>Hide Device Sets</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QComboBox" name="DeviceROMs">
+      <property name="geometry"><rect><x>213</x><y>25</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Games With Device ROMs</string></property></item>
+      <item><property name="text"><string>Games With No Device ROMs</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="Bios">
+      <property name="geometry"><rect><x>8</x><y>25</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Games With BIOS ROMs</string></property></item>
+      <item><property name="text"><string>Games With No BIOS ROMs</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QCheckBox" name="HideBiosSets">
+      <property name="geometry"><rect><x>110</x><y>6</y><width>93</width><height>19</height></rect></property>
+      <property name="text"><string>Hide BIOS Sets</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QCheckBox" name="HideGamesWithCHDFiles">
+      <property name="geometry"><rect><x>8</x><y>256</y><width>171</width><height>20</height></rect></property>
+      <property name="text"><string>Hide Games With CHD Files</string></property>
+      <property name="toolTip"><string>Check to hide all games that have CHD files
+(use main games filter to only show CHD games)</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QCheckBox" name="NeoGeoMVS">
+      <property name="geometry"><rect><x>8</x><y>152</y><width>161</width><height>18</height></rect></property>
+      <property name="text"><string>Show Only Neo-Geo MVS</string></property>
+      <property name="toolTip"><string>Check it to show only Neo-Geo games compatible with multi-slot machines
+MAME v0.154 minimum required</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QCheckBox" name="STVMultiSlot">
+      <property name="geometry"><rect><x>8</x><y>184</y><width>164</width><height>18</height></rect></property>
+      <property name="text"><string>Show Only ST-V Multi-Slot</string></property>
+      <property name="toolTip"><string>Check it to show only ST-V games compatible with multi-slot machines
+MAME v0.154 minimum required</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QComboBox" name="ControlType_New">
+      <property name="geometry"><rect><x>418</x><y>73</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List All</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="ScreenOrientation">
+      <property name="geometry"><rect><x>8</x><y>121</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List All</string></property></item>
+      <item><property name="text"><string>Horizontal Games</string></property></item>
+      <item><property name="text"><string>Vertical Games</string></property></item>
+      <item><property name="text"><string>Unknown</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QCheckBox" name="ShowMergedSetsOnly">
+      <property name="geometry"><rect><x>8</x><y>296</y><width>147</width><height>20</height></rect></property>
+      <property name="text"><string>Show Merged Sets Only</string></property>
+      <property name="toolTip"><string>Check to only show clone sets merged into parent sets (MAME/HBMAME)
+Merged sets are not fully supported!</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QCheckBox" name="HideNoDumpROMsGames">
+      <property name="geometry"><rect><x>8</x><y>276</y><width>152</width><height>20</height></rect></property>
+      <property name="text"><string>Hide "No Dump" Games</string></property>
+      <property name="toolTip"><string>Check to hide games that have all ROMs/CHDs tagged as "nodump" or without CRC32/SHA1 checksum</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QComboBox" name="SaveState">
+      <property name="geometry"><rect><x>213</x><y>121</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List All</string></property></item>
+      <item><property name="text"><string>Supported</string></property></item>
+      <item><property name="text"><string>Unsupported</string></property></item>
+      <item><property name="text"><string>Unknown</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="ElGroupBox" name="CategoryFiltersGroupBox">
+      <property name="geometry"><rect><x>213</x><y>200</y><width>400</width><height>152</height></rect></property>
+      <property name="title"><string>Category (uncheck to hide)         </string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+      <widget class="ElLabel" name="LabelCategoryFiltersGroupBoxHint">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>199</x><y>0</y><width>176</width><height>17</height></rect></property>
+        <property name="text"><string> catver.ini or category.ini required </string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsItalic</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonCategoriesToHideInfo">
+        <property name="geometry"><rect><x>154</x><y>0</y><width>19</width><height>19</height></rect></property>
+        <property name="text"><string>?</string></property>
+        <property name="toolTip"><string>Categories to hide info</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonCategoriesToHideInfoClick</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryCasino">
+        <property name="geometry"><rect><x>8</x><y>28</y><width>58</width><height>20</height></rect></property>
+        <property name="text"><string>Casino</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryFruitMachines">
+        <property name="geometry"><rect><x>8</x><y>48</y><width>102</width><height>20</height></rect></property>
+        <property name="text"><string>Fruit Machines</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryRhythm">
+        <property name="geometry"><rect><x>8</x><y>68</y><width>65</width><height>20</height></rect></property>
+        <property name="text"><string>Rhythm</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMature">
+        <property name="geometry"><rect><x>122</x><y>28</y><width>62</width><height>20</height></rect></property>
+        <property name="text"><string>Mature</string></property>
+        <property name="toolTip"><string>Mature / Adult</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMahjong">
+        <property name="geometry"><rect><x>122</x><y>68</y><width>72</width><height>20</height></rect></property>
+        <property name="text"><string>Mahjong</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryTabletop">
+        <property name="geometry"><rect><x>122</x><y>88</y><width>70</width><height>20</height></rect></property>
+        <property name="text"><string>Tabletop</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryPinMAME">
+        <property name="geometry"><rect><x>8</x><y>88</y><width>84</width><height>20</height></rect></property>
+        <property name="text"><string>Mechanical</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryQuiz">
+        <property name="geometry"><rect><x>122</x><y>108</y><width>50</width><height>20</height></rect></property>
+        <property name="text"><string>Quiz</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryUtilities">
+        <property name="geometry"><rect><x>322</x><y>28</y><width>62</width><height>20</height></rect></property>
+        <property name="text"><string>Utilities</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryCalculator">
+        <property name="geometry"><rect><x>229</x><y>28</y><width>77</width><height>20</height></rect></property>
+        <property name="text"><string>Calculator</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryEducational">
+        <property name="geometry"><rect><x>229</x><y>48</y><width>85</width><height>20</height></rect></property>
+        <property name="text"><string>Educational</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryElectronic">
+        <property name="geometry"><rect><x>322</x><y>48</y><width>73</width><height>20</height></rect></property>
+        <property name="text"><string>Electronic</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryPrinters">
+        <property name="geometry"><rect><x>229</x><y>68</y><width>64</width><height>20</height></rect></property>
+        <property name="text"><string>Printers</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryPhones">
+        <property name="geometry"><rect><x>322</x><y>68</y><width>62</width><height>20</height></rect></property>
+        <property name="text"><string>Phones</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMAMEConsoleMachines">
+        <property name="geometry"><rect><x>229</x><y>88</y><width>159</width><height>20</height></rect></property>
+        <property name="text"><string>MAME Console Machines</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMAMEComputerMachines">
+        <property name="geometry"><rect><x>229</x><y>108</y><width>169</width><height>20</height></rect></property>
+        <property name="text"><string>MAME Computer Machines</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMAMEHandheldMachines">
+        <property name="geometry"><rect><x>229</x><y>128</y><width>168</width><height>20</height></rect></property>
+        <property name="text"><string>MAME Handheld Machines</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryMusic">
+        <property name="geometry"><rect><x>8</x><y>128</y><width>56</width><height>20</height></rect></property>
+        <property name="text"><string>Music</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategoryBoardGame">
+        <property name="geometry"><rect><x>8</x><y>108</y><width>89</width><height>20</height></rect></property>
+        <property name="text"><string>Board Game</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+      <widget class="QCheckBox" name="CategorySlotMachines">
+        <property name="geometry"><rect><x>122</x><y>48</y><width>97</width><height>20</height></rect></property>
+        <property name="text"><string>Slot Machines</string></property>
+        <property name="toolTip"><string>Slot Machines / Video Slot</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      </widget>
+    </widget>
+    <widget class="QCheckBox" name="ShowOnlySetsCRC32Collision">
+      <property name="geometry"><rect><x>8</x><y>316</y><width>191</width><height>20</height></rect></property>
+      <property name="text"><string>Show CRC32 Collision Sets Only</string></property>
+      <property name="toolTip"><string>Check it to hide all sets that do not have CRC32 collisions</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QCheckBox" name="HideMAMESoftlist_vgmplay">
+      <property name="geometry"><rect><x>8</x><y>216</y><width>180</width><height>18</height></rect></property>
+      <property name="text"><string>Hide Video Game Music Files</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+    </widget>
+    <widget class="QComboBox" name="SpecialList">
+      <property name="geometry"><rect><x>418</x><y>121</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Show Special List Games Only</string></property></item>
+      <item><property name="text"><string>Hide Special List Games</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="Cocktail">
+      <property name="geometry"><rect><x>213</x><y>169</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Games With Cocktail Mode</string></property></item>
+      <item><property name="text"><string>Games With No Cocktail Mode</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QComboBox" name="ArtworkRequired">
+      <property name="geometry"><rect><x>418</x><y>169</y><width>195</width><height>23</height></rect></property>
+      <item><property name="text"><string>List Both</string></property></item>
+      <item><property name="text"><string>Games That Require Artwork</string></property></item>
+      <item><property name="text"><string>No Artwork Required</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElGroupBox</class><extends>QGroupBox</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

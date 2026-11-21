@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormVideoPreviewSettings</class>
+  <widget class="QWidget" name="FormVideoPreviewSettings">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>930</width><height>637</height></rect></property>
+    <property name="windowTitle"><string>Video Preview Settings: Watch Game Videos With a Media Player</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormVideoPreviewSettings</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <widget class="ElPanel" name="PanelSettings">
+      <property name="geometry"><rect><x>0</x><y>438</y><width>930</width><height>158</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelVideoPreviewFolder">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>13</x><y>2</y><width>298</width><height>16</height></rect></property>
+        <property name="text"><string>Folder (emulator relative path support, no network path)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelVideoPreviewMediaPlayerExecutable">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>13</x><y>63</y><width>181</width><height>16</height></rect></property>
+        <property name="text"><string>Media Player File (.exe; .bat; .cmd)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelVideoPreviewMediaPlayerParameters">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>13</x><y>111</y><width>316</width><height>16</height></rect></property>
+        <property name="text"><string>Media Player Parameters         (%1 tag required for filename)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelVideoPreviewDummyVideoParameters">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>478</x><y>111</y><width>304</width><height>16</height></rect></property>
+        <property name="text"><string>Dummy Video Media Player Parameters (%1 tag optional)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="QLineEdit" name="VideoPreviewFolder">
+        <property name="geometry"><rect><x>8</x><y>19</y><width>403</width><height>21</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclOnChange" stdset="0"><string notr="true">VideoPreviewFolderChange</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonSelectVideoPreviewFolder">
+        <property name="geometry"><rect><x>414</x><y>19</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a folder</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonSelectVideoPreviewFolderClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="VideoPreviewMediaPlayerExecutable">
+        <property name="geometry"><rect><x>8</x><y>80</y><width>403</width><height>21</height></rect></property>
+                <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonSelectVideoPreviewMediaPlayer">
+        <property name="geometry"><rect><x>414</x><y>80</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a file</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonSelectVideoPreviewMediaPlayerClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="VideoPreviewMediaPlayerParameters">
+        <property name="geometry"><rect><x>8</x><y>128</y><width>403</width><height>21</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      </widget>
+      <widget class="QCheckBox" name="VideoPreviewAutoPlay">
+        <property name="geometry"><rect><x>658</x><y>54</y><width>69</width><height>20</height></rect></property>
+        <property name="text"><string>AutoPlay</string></property>
+        <property name="toolTip"><string>Play video preview automatically when selecting games</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      </widget>
+      <widget class="QCheckBox" name="VideoPreviewParentGameVideo">
+        <property name="geometry"><rect><x>658</x><y>28</y><width>121</width><height>20</height></rect></property>
+        <property name="text"><string>Parent Game Video</string></property>
+        <property name="toolTip"><string>Play video of parent game if video of clone game is not found</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      </widget>
+      <widget class="QCheckBox" name="VideoPreviewPlayDummyVideo">
+        <property name="geometry"><rect><x>658</x><y>80</y><width>260</width><height>18</height></rect></property>
+        <property name="text"><string>Play Dummy Video to Stop Current Playback</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+      </widget>
+      <widget class="QLineEdit" name="VideoPreviewDummyVideoParameters">
+        <property name="geometry"><rect><x>473</x><y>128</y><width>403</width><height>21</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      </widget>
+      <widget class="QCheckBox" name="VideoPreviewEnabled">
+        <property name="geometry"><rect><x>658</x><y>2</y><width>70</width><height>20</height></rect></property>
+        <property name="text"><string>Enabled</string></property>
+        <property name="toolTip"><string>Enable playback of video preview feature (uncheck to disable it completely)</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonResetVideoPreviewMediaPlayerParameters">
+        <property name="geometry"><rect><x>414</x><y>128</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Reset parameter to current</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonResetVideoPreviewMediaPlayerParametersClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonResetVideoPreviewDummyVideoParameters">
+        <property name="geometry"><rect><x>879</x><y>128</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Reset dummy parameter to current</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonResetVideoPreviewDummyVideoParametersClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonClearVideoPreviewMediaPlayer">
+        <property name="geometry"><rect><x>459</x><y>80</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Reset filename to current</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonResetVideoPreviewFolder">
+        <property name="geometry"><rect><x>459</x><y>19</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Reset folder to current</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonResetVideoPreviewFolderClick</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

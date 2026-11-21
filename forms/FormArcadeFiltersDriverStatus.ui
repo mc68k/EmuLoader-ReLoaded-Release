@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeFiltersDriverStatus</class>
+  <widget class="QWidget" name="FormArcadeFiltersDriverStatus">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>250</width><height>290</height></rect></property>
+    <property name="windowTitle"><string>Driver Status Filter</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeFiltersDriverStatus</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsToolWindow</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElLabel" name="LabelSelectCategory">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>24</x><y>8</y><width>92</width><height>16</height></rect></property>
+      <property name="text"><string>Select a Category</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElLabel" name="LabelFilterStatus">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>24</x><y>64</y><width>76</width><height>16</height></rect></property>
+      <property name="text"><string>Select a Status</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>249</y><width>250</width><height>41</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#dfdfdf</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonOk">
+        <property name="geometry"><rect><x>32</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Apply</string></property>
+        <property name="toolTip"><string>Close and update filters</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonCancel">
+        <property name="geometry"><rect><x>130</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="toolTip"><string>Close without changing filters</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">2</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+    </widget>
+    <widget class="QRadioButton" name="ListAll">
+      <property name="geometry"><rect><x>8</x><y>85</y><width>225</width><height>20</height></rect></property>
+      <property name="text"><string>List All</string></property>
+      <property name="toolTip"><string>List All</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ListAllClick</string></property>
+    </widget>
+    <widget class="QComboBox" name="DriverStatusCategory">
+      <property name="geometry"><rect><x>24</x><y>26</y><width>201</width><height>23</height></rect></property>
+      <item><property name="text"><string>Driver Status (All Systems)</string></property></item>
+      <item><property name="text"><string>Emulation Status (MAME Only)</string></property></item>
+      <item><property name="text"><string>Color Status (MAME Only)</string></property></item>
+      <item><property name="text"><string>Sound Status (MAME Only)</string></property></item>
+      <item><property name="text"><string>Graphic Status (MAME Only)</string></property></item>
+      <property name="currentIndex"><number>0</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TComboBox2Ex</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">csDropDownList</string></property>
+    </widget>
+    <widget class="QRadioButton" name="GoodImperfect">
+      <property name="geometry"><rect><x>8</x><y>117</y><width>225</width><height>20</height></rect></property>
+      <property name="text"><string>Working (Good+Imperfect)</string></property>
+      <property name="toolTip"><string>Working (Good+Imperfect)</string></property>
+      <property name="vclTag" stdset="0"><number>1</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ListAllClick</string></property>
+    </widget>
+    <widget class="QRadioButton" name="Imperfect">
+      <property name="geometry"><rect><x>8</x><y>181</y><width>225</width><height>20</height></rect></property>
+      <property name="text"><string>Working (Imperfect)</string></property>
+      <property name="toolTip"><string>Working (Imperfect)</string></property>
+      <property name="vclTag" stdset="0"><number>3</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ListAllClick</string></property>
+    </widget>
+    <widget class="QRadioButton" name="Preliminary">
+      <property name="geometry"><rect><x>8</x><y>213</y><width>225</width><height>20</height></rect></property>
+      <property name="text"><string>Non-Working (Preliminary)</string></property>
+      <property name="toolTip"><string>Non-Working (Preliminary)</string></property>
+      <property name="vclTag" stdset="0"><number>4</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ListAllClick</string></property>
+    </widget>
+    <widget class="QRadioButton" name="Good">
+      <property name="geometry"><rect><x>8</x><y>149</y><width>225</width><height>20</height></rect></property>
+      <property name="text"><string>Working (Good)</string></property>
+      <property name="toolTip"><string>Working (Good)</string></property>
+      <property name="vclTag" stdset="0"><number>2</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ListAllClick</string></property>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElImage</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

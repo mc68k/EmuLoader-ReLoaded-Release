@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormImagesManager</class>
+  <widget class="QWidget" name="FormImagesManager">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>931</width><height>550</height></rect></property>
+    <property name="windowTitle"><string>MAME Images Manager (Unzipped Images Only!)</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormImagesManager</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <widget class="ElSplitter" name="SplitterList">
+      <property name="geometry"><rect><x>604</x><y>31</y><width>6</width><height>456</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alRight</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TSplitterEx</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">tsOffice2007Luna</string></property>
+    </widget>
+    <widget class="QTreeView" name="MissingImagesList">
+      <property name="geometry"><rect><x>0</x><y>31</y><width>604</width><height>456</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alClient</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+      <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      <property name="vclOnDblClick" stdset="0"><string notr="true">MissingImagesListDblClick</string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelNotUsed">
+      <property name="geometry"><rect><x>610</x><y>31</y><width>305</width><height>456</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alRight</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+      <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      <widget class="ElSplitter" name="SplitterNotUsed">
+        <property name="geometry"><rect><x>0</x><y>249</y><width>305</width><height>7</height></rect></property>
+        <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSplitterEx</string></property>
+        <property name="vclStyle" stdset="0"><string notr="true">tsOffice2007Luna</string></property>
+      </widget>
+      <widget class="ElImage" name="ImagePreview">
+        <property name="geometry"><rect><x>0</x><y>256</y><width>305</width><height>200</height></rect></property>
+        <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage32</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ImagePreviewClick</string></property>
+      </widget>
+      <widget class="QTreeView" name="NotUsedImagesList">
+        <property name="geometry"><rect><x>0</x><y>0</y><width>305</width><height>249</height></rect></property>
+        <property name="vclAlign" stdset="0"><string notr="true">alClient</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+        <property name="vclOnDblClick" stdset="0"><string notr="true">NotUsedImagesListDblClick</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelToolBarButtons">
+      <property name="geometry"><rect><x>0</x><y>0</y><width>915</width><height>31</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alTop</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgWindowsTheme</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElImage" name="ImageCategoryIcon">
+        <property name="geometry"><rect><x>2</x><y>3</y><width>24</width><height>24</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ImageCategorySelectLabelClick</string></property>
+      </widget>
+      <widget class="ElLabel" name="ImageCategorySelectLabel">
+        <property name="geometry"><rect><x>30</x><y>3</y><width>100</width><height>24</height></rect></property>
+        <property name="text"><string>Game Snapshot</string></property>
+        <property name="toolTip"><string>Click here to select an image category</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ImageCategorySelectLabelClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonScanMissing">
+        <property name="geometry"><rect><x>135</x><y>2</y><width>124</width><height>26</height></rect></property>
+        <property name="text"><string>Scan Missing Images</string></property>
+        <property name="toolTip"><string>Click here to scan games with missing  images</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonScanMissingClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonScanInvalidImages">
+        <property name="geometry"><rect><x>441</x><y>2</y><width>118</width><height>26</height></rect></property>
+        <property name="text"><string>Scan Invalid Images</string></property>
+        <property name="toolTip"><string>Click here to scan unknown image filenames, not used by any game</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonScanInvalidImagesClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonHelp">
+        <property name="geometry"><rect><x>565</x><y>2</y><width>38</width><height>26</height></rect></property>
+        <property name="text"><string>Help</string></property>
+        <property name="toolTip"><string>How do I use this thing ? :)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonHelpClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonScanNotUsedImages">
+        <property name="geometry"><rect><x>263</x><y>2</y><width>174</width><height>26</height></rect></property>
+        <property name="text"><string>Scan Images of Missing Games</string></property>
+        <property name="toolTip"><string>Click here to search available images for missing games</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonScanNotUsedImagesClick</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="BottomBar">
+      <property name="geometry"><rect><x>0</x><y>487</y><width>915</width><height>24</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgWindowsTheme</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelTotalItemsMissing">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>4</x><y>1</y><width>83</width><height>22</height></rect></property>
+        <property name="text"><string>Missing Images</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonNotUsedImagesDeleteFiles">
+        <property name="geometry"><rect><x>162</x><y>1</y><width>145</width><height>22</height></rect></property>
+        <property name="text"><string>Delete Not Used Images</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclFlat" stdset="0"><string notr="true">True</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonNotUsedImagesDeleteFilesClick</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelTotalItemsNotUsed">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>614</x><y>0</y><width>77</width><height>23</height></rect></property>
+        <property name="text"><string>Invalid Images</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInvalidImagesDeleteFiles">
+        <property name="geometry"><rect><x>772</x><y>0</y><width>137</width><height>22</height></rect></property>
+        <property name="text"><string>Delete Invalid Images</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclFlat" stdset="0"><string notr="true">True</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInvalidImagesDeleteFilesClick</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElImage</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElShape</class><extends>QFrame</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElSplitter</class><extends>QFrame</extends><header>ElWidgets.h</header></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

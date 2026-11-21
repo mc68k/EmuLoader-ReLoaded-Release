@@ -1,0 +1,38 @@
+EmuLoader ReLoaded License
+
+EmuLoader ReLoaded is a community continuation of EmuLoader, originally created by Ciro Alfredo
+Consentino (1974-2021). Ported from his Emuloader v8.9.4.
+
+EmuLoader was released by its author as freeware and as an open source project, on these terms:
+"It can be distributed freely. It cannot be sold. It cannot be used for commercial purposes."
+EmuLoader ReLoaded is based on EmuLoader's source code, and keeps those terms.
+
+EmuLoader: copyright Ciro Alfredo Consentino.
+EmuLoader ReLoaded's own changes and additions: copyright 2026 the EmuLoader ReLoaded contributors.
+
+Permission is granted, free of charge, to anyone who obtains EmuLoader ReLoaded (the program, its
+source code and its documentation) to use it, copy it and share it, and to change it and share
+the changed version, on these conditions:
+
+1. Free of charge. EmuLoader ReLoaded, and any version changed from it, may not be sold, may not
+   be part of anything that is sold, and may not be used for commercial purposes. A fee for the
+   service of copying it is a sale.
+
+2. The credits stay. Every copy, changed or not, keeps this license, the credit to Ciro Alfredo
+   Consentino as EmuLoader's creator, and the credit to EmuLoader ReLoaded.
+
+3. Changed versions say so. A changed version must say that it was changed, and must not be
+   presented as an official release of EmuLoader ReLoaded.
+
+4. Changed versions stay open. Whoever shares a changed version must make its source code
+   available to the people who receive it, on these same terms.
+
+5. The other parts keep their own licenses. EmuLoader ReLoaded includes and uses software by
+   others, each under its own license (Qt, miniz, the LZMA SDK, the Press Start 2P font and the
+   video player's libmpv and FFmpeg). Their licenses are in the "licenses" folder of the program,
+   and in the "third_party" and "resources" folders of the source code. This license doesn't
+   change theirs.
+
+No warranty. EmuLoader ReLoaded is provided as it is, without any warranty of any kind, express
+or implied. Its authors are not responsible for any loss of data, damage to a computer or other
+harm caused by using it, or by not being able to use it.

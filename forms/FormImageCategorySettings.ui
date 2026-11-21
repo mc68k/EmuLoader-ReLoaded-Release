@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormImageCategorySettings</class>
+  <widget class="QWidget" name="FormImageCategorySettings">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>930</width><height>671</height></rect></property>
+    <property name="windowTitle"><string>Image Category Settings (Folders, Visibility, Background Color)</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormImageCategorySettings</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElLabel" name="LabelImageCategoryBackgroundColor">
+      <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+      <property name="geometry"><rect><x>634</x><y>517</y><width>133</width><height>16</height></rect></property>
+      <property name="text"><string>Image Background Color</string></property>
+      <property name="toolTip"><string>Folder [%s]</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+<widget class="ElLabel" name="LabelImageCategoryFolder">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>12</y><width>182</width><height>16</height></rect></property>
+        <property name="text"><string>Image Category Folder [.png; .jpg]</string></property>
+        <property name="toolTip"><string>Image Category Folder [%s]</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="QLineEdit" name="ImageCategoryFolder">
+        <property name="geometry"><rect><x>8</x><y>29</y><width>350</width><height>21</height></rect></property>
+        <property name="toolTip"><string>Select a Folder for Game Snapshots</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclOnChange" stdset="0"><string notr="true">ImageCategoryFolderChange</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonSelectImageCategoryFolder">
+        <property name="geometry"><rect><x>361</x><y>29</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a folder</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonSelectImageCategoryFolderClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonDefaultImageCategoryFolder">
+        <property name="geometry"><rect><x>361</x><y>6</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Default</string></property>
+        <property name="toolTip"><string>Use a default folder name assigned by the frontend</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonDefaultImageCategoryFolderClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonResetImageCategoryFolder">
+        <property name="geometry"><rect><x>315</x><y>6</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Reset folder to current</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonResetImageCategoryFolderClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonClearImageCategoryFolder">
+        <property name="geometry"><rect><x>269</x><y>6</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Clear</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonClearImageCategoryFolderClick</string></property>
+      </widget>
+    <widget class="ElColorBox" name="ImageCategoryBackgroundColor">
+      <property name="geometry"><rect><x>634</x><y>533</y><width>185</width><height>22</height></rect></property>
+      <property name="toolTip"><string>Image Category Background Color</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TColorBoxEx</string></property>
+      <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">cbStandardColors,cbExtendedColors,cbSystemColors,cbCustomColor,cbPrettyNames</string></property>
+      <property name="vclOnSelect" stdset="0"><string notr="true">ImageCategoryBackgroundColorSelect</string></property>
+    </widget>
+    <widget class="ElButton" name="ButtonImageCategoryBackgroundColorReset">
+      <property name="geometry"><rect><x>822</x><y>533</y><width>43</width><height>22</height></rect></property>
+      <property name="text"><string>Reset</string></property>
+      <property name="toolTip"><string>Reset color to current</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ButtonImageCategoryBackgroundColorResetClick</string></property>
+    </widget>
+    <widget class="QCheckBox" name="ImageSingleBackgroundColorEnabled">
+      <property name="geometry"><rect><x>634</x><y>572</y><width>155</width><height>18</height></rect></property>
+      <property name="text"><string>Single Background Color</string></property>
+      <property name="toolTip"><string>Use the same background color behind every picture category, instead of a color for each one.</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+    </widget>
+    <widget class="ElColorBox" name="ImageSingleBackgroundColor">
+      <property name="geometry"><rect><x>634</x><y>590</y><width>185</width><height>22</height></rect></property>
+      <property name="toolTip"><string>Image Single Background Color</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TColorBoxEx</string></property>
+      <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">cbStandardColors,cbExtendedColors,cbSystemColors,cbCustomColor,cbPrettyNames</string></property>
+    </widget>
+    <widget class="ElButton" name="ImageSingleBackgroundColorButtonReset">
+      <property name="geometry"><rect><x>822</x><y>590</y><width>43</width><height>22</height></rect></property>
+      <property name="text"><string>Reset</string></property>
+      <property name="toolTip"><string>Reset color to current</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElColorBox</class><extends>QComboBox</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

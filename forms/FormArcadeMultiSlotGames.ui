@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeMultiSlotGames</class>
+  <widget class="QWidget" name="FormArcadeMultiSlotGames">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>994</width><height>373</height></rect></property>
+    <property name="windowTitle"><string>Neo-Geo MVS (Multi Video System)</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeMultiSlotGames</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElLabel" name="LabelHelpText">
+      <property name="geometry"><rect><x>428</x><y>243</y><width>380</width><height>28</height></rect></property>
+      <property name="text"><string>Choose a cartridge slot for each game (%u slots max)
+MAME v%s minimum required</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+      <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+      <property name="wordWrap"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>332</y><width>994</width><height>41</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#dddddd</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonOk">
+        <property name="geometry"><rect><x>401</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>OK</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonNo">
+        <property name="geometry"><rect><x>504</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">2</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+    </widget>
+    <widget class="ElButton" name="ButtonUp">
+      <property name="geometry"><rect><x>4</x><y>243</y><width>85</width><height>25</height></rect></property>
+      <property name="text"><string>Move Up</string></property>
+      <property name="toolTip"><string>Move selected game to upper slot [Ctrl+Up Arrow]</string></property>
+      <property name="vclTag" stdset="0"><number>1</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ButtonUpClick</string></property>
+    </widget>
+    <widget class="ElButton" name="ButtonDown">
+      <property name="geometry"><rect><x>93</x><y>243</y><width>85</width><height>25</height></rect></property>
+      <property name="text"><string>Move Down</string></property>
+      <property name="toolTip"><string>Move selected game to lower slot [Ctrl+Down Arrow]</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ButtonUpClick</string></property>
+    </widget>
+    <widget class="ElButton" name="ButtonRemoveFromList">
+      <property name="geometry"><rect><x>182</x><y>243</y><width>85</width><height>25</height></rect></property>
+      <property name="text"><string>Remove</string></property>
+      <property name="toolTip"><string>Remove selected games from the list [Delete]</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">ButtonRemoveFromListClick</string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelNeoGeoMVS">
+      <property name="geometry"><rect><x>4</x><y>289</y><width>986</width><height>31</height></rect></property>
+      <property name="vclVisible" stdset="0"><bool>false</bool></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true">frLeft,frTop,frRight,frBottom</string></property>
+      <widget class="ElLabel" name="LabelMultiSlotMachines">
+        <property name="geometry"><rect><x>11</x><y>8</y><width>898</width><height>15</height></rect></property>
+        <property name="text"><string>Use Machine: Neo-Geo MV-6F    1990    6-slot    [neogeo]</string></property>
+        <property name="toolTip"><string>neogeo</string></property>
+        <property name="vclTag" stdset="0"><number>6</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Consolas</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonChangePanelNeoGeoMVS">
+        <property name="geometry"><rect><x>917</x><y>4</y><width>65</width><height>23</height></rect></property>
+        <property name="text"><string>Change</string></property>
+        <property name="toolTip"><string>Select another machine to play games with</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonChangePanelNeoGeoMVSClick</string></property>
+      </widget>
+    </widget>
+    <widget class="QTreeView" name="GamesList">
+      <property name="geometry"><rect><x>4</x><y>4</y><width>986</width><height>230</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+      <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelMultiSlotMachines">
+      <property name="geometry"><rect><x>8</x><y>30</y><width>978</width><height>290</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#fafafa</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#010000</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#000059</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelMultiSlotMachinesChooseMachineToRun">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>15</x><y>255</y><width>353</width><height>17</height></rect></property>
+        <property name="text"><string>Choose the machine to run the games with, and click OK</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>13</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#a0a0a4</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelMultiSlotMachinesBoldDefaultMachine">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>517</x><y>256</y><width>169</width><height>15</height></rect></property>
+        <property name="text"><string>default machine is in bold</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#a0a0a4</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="QTreeView" name="MultiSlotMachines">
+        <property name="geometry"><rect><x>15</x><y>16</y><width>946</width><height>226</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnDblClick" stdset="0"><string notr="true">MultiSlotMachinesDblClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonOkMultiSlotMachines">
+        <property name="geometry"><rect><x>823</x><y>252</y><width>65</width><height>23</height></rect></property>
+        <property name="text"><string>OK</string></property>
+        <property name="toolTip"><string>Select another machine to play games with (mouse double-click or ENTER key)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonOkMultiSlotMachinesClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonCancelMultiSlotMachines">
+        <property name="geometry"><rect><x>896</x><y>252</y><width>65</width><height>23</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="toolTip"><string>Select another machine to play games with (mouse double-click or ENTER key)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonCancelMultiSlotMachinesClick</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

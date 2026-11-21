@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeScanGamesMode</class>
+  <widget class="QWidget" name="FormArcadeScanGamesMode">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>380</width><height>432</height></rect></property>
+    <property name="windowTitle"><string>Scan Games Mode (MAME and Arcade only)</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeScanGamesMode</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElLabel" name="LabelImportantTips">
+      <property name="geometry"><rect><x>17</x><y>351</y><width>352</width><height>37</height></rect></property>
+      <property name="text"><string>Important: bios/device sets included; parent sets are ignored; merged sets are not supported.</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+      <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+      <property name="wordWrap"><bool>true</bool></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+      <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+      <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>391</y><width>380</width><height>41</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonOk">
+        <property name="geometry"><rect><x>94</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>OK</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonCancel">
+        <property name="geometry"><rect><x>198</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">7</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+    </widget>
+    <widget class="ElGroupBox" name="ScanModeBox">
+      <property name="geometry"><rect><x>8</x><y>8</y><width>364</width><height>159</height></rect></property>
+      <property name="title"><string>           Choose Scan Mode </string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+      <widget class="ElImage" name="ScanModeIcon">
+        <property name="geometry"><rect><x>21</x><y>0</y><width>16</width><height>16</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelFullScan">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>84</x><y>32</y><width>272</width><height>16</height></rect></property>
+        <property name="text"><string>(validate all ROMs/CHDs, CRC32/SHA-1 checksum)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelQuickScan">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>94</x><y>58</y><width>262</width><height>16</height></rect></property>
+        <property name="text"><string>(search .zip; .7z; .chd game/bios/device files only)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelForceAllAvailable">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>167</x><y>84</y><width>189</width><height>16</height></rect></property>
+        <property name="text"><string>(no validation or file search is done)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000080</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="QRadioButton" name="FullScan">
+        <property name="geometry"><rect><x>9</x><y>30</y><width>73</width><height>20</height></rect></property>
+        <property name="text"><string>Full Scan</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">FullScanClick</string></property>
+      </widget>
+      <widget class="QRadioButton" name="QuickScan">
+        <property name="geometry"><rect><x>9</x><y>56</y><width>81</width><height>20</height></rect></property>
+        <property name="text"><string>Quick Scan</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">FullScanClick</string></property>
+      </widget>
+      <widget class="QRadioButton" name="ForceAllAvailable">
+        <property name="geometry"><rect><x>9</x><y>82</y><width>143</width><height>20</height></rect></property>
+        <property name="text"><string>Force Games Available</string></property>
+        <property name="vclTag" stdset="0"><number>2</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">FullScanClick</string></property>
+      </widget>
+      <widget class="ElGroupBox" name="ScanMAMESetsBox">
+        <property name="geometry"><rect><x>7</x><y>114</y><width>349</width><height>41</height></rect></property>
+        <property name="title"><string>         Scan MAME Sets (v0.162 or newer)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsAdvNone</string></property>
+        <widget class="ElImage" name="ImageScanMAME">
+          <property name="geometry"><rect><x>14</x><y>0</y><width>16</width><height>16</height></rect></property>
+          <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        </widget>
+        <widget class="QRadioButton" name="ScanMAMEAllSets">
+          <property name="geometry"><rect><x>2</x><y>20</y><width>62</width><height>20</height></rect></property>
+          <property name="text"><string>All Sets</string></property>
+          <property name="checked"><bool>true</bool></property>
+          <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+          <property name="vclFontPx" stdset="0"><number>12</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+          <property name="vclOnClick" stdset="0"><string notr="true">ScanMAMEAllSetsClick</string></property>
+        </widget>
+        <widget class="QRadioButton" name="ScanMAMEArcadeMachines">
+          <property name="geometry"><rect><x>81</x><y>20</y><width>118</width><height>20</height></rect></property>
+          <property name="text"><string>Arcade/Machines</string></property>
+          <property name="vclTag" stdset="0"><number>1</number></property>
+          <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+          <property name="vclOnClick" stdset="0"><string notr="true">ScanMAMEAllSetsClick</string></property>
+        </widget>
+        <widget class="QRadioButton" name="ScanMAMESoftwareListGames">
+          <property name="geometry"><rect><x>217</x><y>20</y><width>131</width><height>20</height></rect></property>
+          <property name="text"><string>Software List Games</string></property>
+          <property name="vclTag" stdset="0"><number>2</number></property>
+          <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+          <property name="vclFontPx" stdset="0"><number>12</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclOnClick" stdset="0"><string notr="true">ScanMAMEAllSetsClick</string></property>
+        </widget>
+      </widget>
+    </widget>
+    <widget class="ElGroupBox" name="MAMESoftwareListBox">
+      <property name="geometry"><rect><x>8</x><y>184</y><width>364</width><height>131</height></rect></property>
+      <property name="title"><string>           MAME Software List Games </string></property>
+      <property name="vclTag" stdset="0"><number>1</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+      <widget class="ElImage" name="ImageMAMESoftwareList">
+        <property name="geometry"><rect><x>21</x><y>0</y><width>16</width><height>16</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElGroupBox</class><extends>QGroupBox</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElImage</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElShape</class><extends>QFrame</extends><header>ElWidgets.h</header></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

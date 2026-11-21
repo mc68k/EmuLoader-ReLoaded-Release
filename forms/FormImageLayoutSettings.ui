@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormImageLayoutSettings</class>
+  <widget class="QWidget" name="FormImageLayoutSettings">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>878</width><height>558</height></rect></property>
+    <property name="windowTitle"><string>Image Layout Settings</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormImageLayoutSettings</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElImage" name="ImageScrLayout">
+      <property name="geometry"><rect><x>425</x><y>361</y><width>275</width><height>175</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TImage32</string></property>
+      <property name="vclColor" stdset="0"><string notr="true">#000000</string></property>
+    </widget>
+    <widget class="ElGroupBox" name="GroupBoxCategoryConsoleComputer">
+      <property name="geometry"><rect><x>423</x><y>177</y><width>445</width><height>161</height></rect></property>
+      <property name="title"><string>      Use Custom Category for Console/Computer </string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#5b6978</string></property>
+      <widget class="ElShape" name="FrameIconLayScr2_ConsComp">
+        <property name="geometry"><rect><x>120</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr3_ConsComp">
+        <property name="geometry"><rect><x>229</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr1_ConsComp">
+        <property name="geometry"><rect><x>12</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel1_ConsComp">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>39</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr3_ConsComp">
+        <property name="geometry"><rect><x>231</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Flyer</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr3_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr2_ConsComp">
+        <property name="geometry"><rect><x>121</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Title Snapshot</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr2_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr1_ConsComp">
+        <property name="geometry"><rect><x>26</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr1_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr2_ConsComp">
+        <property name="geometry"><rect><x>134</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr2_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr3_ConsComp">
+        <property name="geometry"><rect><x>243</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr3_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr1_ConsComp">
+        <property name="geometry"><rect><x>13</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Game Snapshot</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr1_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr4_ConsComp">
+        <property name="geometry"><rect><x>337</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr4_ConsComp">
+        <property name="geometry"><rect><x>339</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Cabinet</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr4_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr4_ConsComp">
+        <property name="geometry"><rect><x>351</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr4_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel4_ConsComp">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>365</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 4</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel3_ConsComp">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>257</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 3</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel2_ConsComp">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>148</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 2</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonLayoutResetPanelsIndex_ConsComp">
+        <property name="geometry"><rect><x>388</x><y>0</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Default</string></property>
+        <property name="toolTip"><string>Reset settings of selected layout to default</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFlat" stdset="0"><string notr="true">True</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonLayoutResetPanelsIndex_ConsCompClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonLayoutCopyCatAllSystems_ConsComp">
+        <property name="geometry"><rect><x>347</x><y>0</y><width>41</width><height>21</height></rect></property>
+        <property name="text"><string>Copy</string></property>
+        <property name="toolTip"><string>Copy category selections from "all systems"</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFlat" stdset="0"><string notr="true">True</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonLayoutCopyCatAllSystems_ConsCompClick</string></property>
+      </widget>
+    </widget>
+    <widget class="ElGroupBox" name="GroupBoxCategoryAllSystems">
+      <property name="geometry"><rect><x>423</x><y>6</y><width>445</width><height>161</height></rect></property>
+      <property name="title"><string> Category (All Systems) </string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TAdvGroupBoxEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <widget class="ElShape" name="FrameIconLayScr2">
+        <property name="geometry"><rect><x>120</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr3">
+        <property name="geometry"><rect><x>229</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr1">
+        <property name="geometry"><rect><x>12</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel1">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>41</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr3">
+        <property name="geometry"><rect><x>231</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Flyer</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr3Click</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr2">
+        <property name="geometry"><rect><x>121</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Title Snapshot</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr2Click</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr1">
+        <property name="geometry"><rect><x>26</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr1Click</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr2">
+        <property name="geometry"><rect><x>134</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr2Click</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr3">
+        <property name="geometry"><rect><x>243</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr3Click</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr1">
+        <property name="geometry"><rect><x>13</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Game Snapshot</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr1Click</string></property>
+      </widget>
+      <widget class="ElShape" name="FrameIconLayScr4">
+        <property name="geometry"><rect><x>337</x><y>42</y><width>96</width><height>96</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShape</string></property>
+        <property name="vclPenColor" stdset="0"><string notr="true">#5b6978</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelLayScr4">
+        <property name="geometry"><rect><x>339</x><y>141</y><width>94</width><height>14</height></rect></property>
+        <property name="text"><string>Cabinet</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr4Click</string></property>
+      </widget>
+      <widget class="ElImage" name="IconLayScr4">
+        <property name="geometry"><rect><x>351</x><y>56</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">IconLayScr4Click</string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel4">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>365</x><y>23</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 4</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel2">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>148</x><y>8</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 2</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelPanel3">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>257</x><y>8</y><width>40</width><height>19</height></rect></property>
+        <property name="text"><string>Panel 3</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonLayoutResetPanelsIndex">
+        <property name="geometry"><rect><x>388</x><y>0</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Default</string></property>
+        <property name="toolTip"><string>Reset settings of selected layout to default</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFlat" stdset="0"><string notr="true">True</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonLayoutResetPanelsIndexClick</string></property>
+      </widget>
+      <widget class="QCheckBox" name="PanelEnabledScr2">
+        <property name="geometry"><rect><x>140</x><y>21</y><width>63</width><height>20</height></rect></property>
+        <property name="text"><string>Panel 2</string></property>
+        <property name="toolTip"><string>Show/hide this panel for selected layout</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">PanelEnabledScr2Click</string></property>
+      </widget>
+      <widget class="QCheckBox" name="PanelEnabledScr3">
+        <property name="geometry"><rect><x>249</x><y>21</y><width>62</width><height>20</height></rect></property>
+        <property name="text"><string>Panel 3</string></property>
+        <property name="toolTip"><string>Show/hide this panel for selected layout</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">PanelEnabledScr3Click</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElGroupBox</class><extends>QGroupBox</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElImage</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElShape</class><extends>QFrame</extends><header>ElWidgets.h</header></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

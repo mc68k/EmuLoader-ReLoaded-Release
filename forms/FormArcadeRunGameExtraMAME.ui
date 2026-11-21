@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormArcadeRunGameExtraMAME</class>
+  <widget class="QWidget" name="FormArcadeRunGameExtraMAME">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>1671</width><height>885</height></rect></property>
+    <property name="windowTitle"><string>Run with Extra Parameters</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormArcadeRunGameExtraMAME</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#c0dcc0</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsDialog</string></property>
+    <widget class="ElButton" name="PageButtonInput">
+      <property name="geometry"><rect><x>4</x><y>86</y><width>179</width><height>25</height></rect></property>
+      <property name="text"><string>Playback/Record an Input File</string></property>
+      <property name="checkable"><bool>true</bool></property>
+      <property name="vclGroupIndex" stdset="0"><number>1</number></property>
+      <property name="checked"><bool>true</bool></property>
+      <property name="vclTag" stdset="0"><number>1</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">PageButtonInputClick</string></property>
+    </widget>
+    <widget class="ElButton" name="PageButtonSaveState">
+      <property name="geometry"><rect><x>182</x><y>89</y><width>109</width><height>22</height></rect></property>
+      <property name="text"><string>Load a Save State</string></property>
+      <property name="checkable"><bool>true</bool></property>
+      <property name="vclGroupIndex" stdset="0"><number>1</number></property>
+      <property name="vclTag" stdset="0"><number>2</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">PageButtonInputClick</string></property>
+    </widget>
+    <widget class="ElButton" name="PageButtonMemoryCard">
+      <property name="geometry"><rect><x>290</x><y>89</y><width>121</width><height>22</height></rect></property>
+      <property name="text"><string>Insert Memory Card</string></property>
+      <property name="checkable"><bool>true</bool></property>
+      <property name="vclGroupIndex" stdset="0"><number>1</number></property>
+      <property name="vclTag" stdset="0"><number>3</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">PageButtonInputClick</string></property>
+    </widget>
+    <widget class="ElButton" name="PageButtonRecordMovie">
+      <property name="geometry"><rect><x>410</x><y>89</y><width>206</width><height>22</height></rect></property>
+      <property name="text"><string>Record Current Section to a Movie</string></property>
+      <property name="checkable"><bool>true</bool></property>
+      <property name="vclGroupIndex" stdset="0"><number>1</number></property>
+      <property name="vclTag" stdset="0"><number>4</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TSpeedButtonEx</string></property>
+      <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+      <property name="vclFontPx" stdset="0"><number>12</number></property>
+      <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+      <property name="vclOnClick" stdset="0"><string notr="true">PageButtonInputClick</string></property>
+    </widget>
+    <widget class="ElPanel" name="TopBar">
+      <property name="geometry"><rect><x>0</x><y>0</y><width>1671</width><height>80</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alTop</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#e5f0fa</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#c3dbf5</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#e0f0fe</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#eeeeee</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElImage" name="GameIcon">
+        <property name="geometry"><rect><x>4</x><y>4</y><width>68</width><height>68</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      </widget>
+      <widget class="ElLabel" name="LabelGameTitle">
+        <property name="geometry"><rect><x>106</x><y>0</y><width>708</width><height>33</height></rect></property>
+        <property name="text"><string notr="true">The Gladiator - Road of the Sword / Shen Jian (M68k label V100) (ARM label V100, ROM 02/25/03 SHEN JIAN) (JAMMA PCB)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>13</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="wordWrap"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelGameName">
+        <property name="geometry"><rect><x>106</x><y>46</y><width>486</width><height>27</height></rect></property>
+        <property name="text"><string>gamename [clone of parentname] [bios: biosname] [merged set] [softlist: filename]
+Emulator version</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+        <property name="vclFontPx" stdset="0"><number>11</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+        <property name="wordWrap"><bool>true</bool></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dcc0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElImage" name="SystemIcon">
+        <property name="geometry"><rect><x>76</x><y>48</y><width>24</width><height>24</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TImage</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>456</y><width>819</width><height>41</height></rect></property>
+      <property name="vclTag" stdset="0"><number>1</number></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#dfdfdf</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelInfo">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>56</x><y>12</y><width>301</width><height>19</height></rect></property>
+        <property name="text"><string>Check features you want to use. Uncheck to disable.</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonOk">
+        <property name="geometry"><rect><x>619</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>OK</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">6</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonAbort">
+        <property name="geometry"><rect><x>722</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Cancel</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">7</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="Panel1_PlayRecInputFile">
+      <property name="geometry"><rect><x>0</x><y>111</y><width>819</width><height>345</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelInputFileName">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>319</y><width>207</width><height>16</height></rect></property>
+        <property name="text"><string>Selected File (file extension optional)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#323232</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelInputSelectedFileFolder">
+        <property name="geometry"><rect><x>8</x><y>289</y><width>803</width><height>25</height></rect></property>
+        <property name="text"><string>  Folder of selected file...</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etPathEllips</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true">lfrLeft,lfrRight,lfrBottom</string></property>
+      </widget>
+      <widget class="QCheckBox" name="Enabled_PlaybackRecordInput">
+        <property name="geometry"><rect><x>24</x><y>2</y><width>64</width><height>18</height></rect></property>
+        <property name="text"><string>Enabled</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">Enabled_PlaybackRecordInputClick</string></property>
+      </widget>
+      <widget class="QRadioButton" name="InputPlayback">
+        <property name="geometry"><rect><x>8</x><y>22</y><width>70</width><height>18</height></rect></property>
+        <property name="text"><string>Playback</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">InputPlaybackClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="InputFileName">
+        <property name="geometry"><rect><x>223</x><y>316</y><width>461</width><height>21</height></rect></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">InputFileNameKeyPress</string></property>
+      </widget>
+      <widget class="QRadioButton" name="InputRecord">
+        <property name="geometry"><rect><x>84</x><y>22</y><width>61</width><height>18</height></rect></property>
+        <property name="text"><string>Record</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">InputPlaybackClick</string></property>
+      </widget>
+      <widget class="QCheckBox" name="InputExitEmulatorAfterInputPlayback">
+        <property name="geometry"><rect><x>170</x><y>22</y><width>199</width><height>18</height></rect></property>
+        <property name="text"><string>Exit Emulator After Input Playback</string></property>
+        <property name="toolTip"><string>To be used with playback input</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      </widget>
+      <widget class="QCheckBox" name="InputRecordTimecodeFile">
+        <property name="geometry"><rect><x>366</x><y>22</y><width>183</width><height>18</height></rect></property>
+        <property name="text"><string>Record an Input Timecode File</string></property>
+        <property name="toolTip"><string>To be used with record input</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInputResetFileName">
+        <property name="geometry"><rect><x>686</x><y>316</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Click here to reset filename to game name</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInputResetFileNameClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInputResetFileNameTitle">
+        <property name="geometry"><rect><x>731</x><y>316</y><width>80</width><height>21</height></rect></property>
+        <property name="text"><string>Reset to Title</string></property>
+        <property name="toolTip"><string>Click here to reset filename to game title (no unicode support)</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="QTreeView" name="InputListView">
+        <property name="geometry"><rect><x>8</x><y>42</y><width>803</width><height>248</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelDisabledInput">
+        <property name="geometry"><rect><x>100</x><y>1</y><width>89</width><height>11</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="Panel2_SaveState">
+      <property name="geometry"><rect><x>832</x><y>111</y><width>819</width><height>345</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelLoadSaveStateNotSupportedMsg">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>352</x><y>6</y><width>457</width><height>13</height></rect></property>
+        <property name="text"><string>Save states are not officially supported by this machine!</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Terminal</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelSaveStateSelectedFileFolder">
+        <property name="geometry"><rect><x>8</x><y>312</y><width>803</width><height>25</height></rect></property>
+        <property name="text"><string>  Folder of selected file...</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etPathEllips</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true">lfrLeft,lfrRight,lfrBottom</string></property>
+      </widget>
+      <widget class="QCheckBox" name="Enabled_LoadSaveState">
+        <property name="geometry"><rect><x>24</x><y>2</y><width>64</width><height>18</height></rect></property>
+        <property name="text"><string>Enabled</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">Enabled_LoadSaveStateClick</string></property>
+      </widget>
+      <widget class="QCheckBox" name="AutoSaveState">
+        <property name="geometry"><rect><x>100</x><y>2</y><width>104</width><height>18</height></rect></property>
+        <property name="text"><string>Auto Save State</string></property>
+        <property name="toolTip"><string>Enable automatic restore at startup, and automatic save at exit time</string></property>
+        <property name="vclVisible" stdset="0"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelDisabledSaveStateNotSupportedMsg">
+        <property name="geometry"><rect><x>304</x><y>1</y><width>41</width><height>20</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      </widget>
+      <widget class="QTreeView" name="SaveStateListView">
+        <property name="geometry"><rect><x>8</x><y>22</y><width>803</width><height>291</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelDisabledSaveState">
+        <property name="geometry"><rect><x>208</x><y>0</y><width>57</width><height>11</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="Panel3_MemoryCard">
+      <property name="geometry"><rect><x>0</x><y>512</y><width>819</width><height>345</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelInsertMemoryCard_Slot4">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>109</y><width>30</width><height>16</height></rect></property>
+        <property name="text"><string>Slot 4</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelInsertMemoryCard_Slot3">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>82</y><width>30</width><height>16</height></rect></property>
+        <property name="text"><string>Slot 3</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelInsertMemoryCard_Slot1">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>28</y><width>30</width><height>16</height></rect></property>
+        <property name="text"><string>Slot 1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelInsertMemoryCard_Slot2">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>55</y><width>30</width><height>16</height></rect></property>
+        <property name="text"><string>Slot 2</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelMemoryCardSelectedFileFolder">
+        <property name="geometry"><rect><x>8</x><y>312</y><width>803</width><height>25</height></rect></property>
+        <property name="text"><string>  Folder of selected file...</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etPathEllips</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true">lfrLeft,lfrRight,lfrBottom</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot4_Clear">
+        <property name="geometry"><rect><x>768</x><y>107</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Clear</string></property>
+        <property name="toolTip"><string>Click here to empty this memcard slot</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot4_ClearClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot4_LastUsed">
+        <property name="geometry"><rect><x>703</x><y>107</y><width>64</width><height>21</height></rect></property>
+        <property name="text"><string>Last Used</string></property>
+        <property name="toolTip"><string>Select last used memory card file (might not be the newest)</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot4_LastUsedClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot4_SelectFile">
+        <property name="geometry"><rect><x>654</x><y>107</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a file</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot4_SelectFileClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot3_LastUsed">
+        <property name="geometry"><rect><x>703</x><y>80</y><width>64</width><height>21</height></rect></property>
+        <property name="text"><string>Last Used</string></property>
+        <property name="toolTip"><string>Select last used memory card file (might not be the newest)</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot3_LastUsedClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot3_Clear">
+        <property name="geometry"><rect><x>768</x><y>80</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Clear</string></property>
+        <property name="toolTip"><string>Click here to empty this memcard slot</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot3_ClearClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot3_SelectFile">
+        <property name="geometry"><rect><x>654</x><y>80</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a file</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot3_SelectFileClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="InsertMemoryCard_Slot4">
+        <property name="geometry"><rect><x>40</x><y>107</y><width>612</width><height>21</height></rect></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">InsertMemoryCard_Slot4KeyPress</string></property>
+      </widget>
+      <widget class="QLineEdit" name="InsertMemoryCard_Slot3">
+        <property name="geometry"><rect><x>40</x><y>80</y><width>612</width><height>21</height></rect></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">InsertMemoryCard_Slot3KeyPress</string></property>
+      </widget>
+      <widget class="QCheckBox" name="Enabled_InsertMemoryCard">
+        <property name="geometry"><rect><x>24</x><y>2</y><width>64</width><height>18</height></rect></property>
+        <property name="text"><string>Enabled</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">Enabled_InsertMemoryCardClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="InsertMemoryCard_Slot1">
+        <property name="geometry"><rect><x>40</x><y>26</y><width>612</width><height>21</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">InsertMemoryCard_Slot1KeyPress</string></property>
+      </widget>
+      <widget class="QLineEdit" name="InsertMemoryCard_Slot2">
+        <property name="geometry"><rect><x>40</x><y>53</y><width>612</width><height>21</height></rect></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">InsertMemoryCard_Slot2KeyPress</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot1_SelectFile">
+        <property name="geometry"><rect><x>654</x><y>26</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a file</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot1_SelectFileClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot1_Clear">
+        <property name="geometry"><rect><x>769</x><y>26</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Clear</string></property>
+        <property name="toolTip"><string>Click here to empty this memcard slot</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot1_ClearClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot1_LastUsed">
+        <property name="geometry"><rect><x>703</x><y>26</y><width>64</width><height>21</height></rect></property>
+        <property name="text"><string>Last Used</string></property>
+        <property name="toolTip"><string>Select last used memory card file (might not be the newest)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot1_LastUsedClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot2_SelectFile">
+        <property name="geometry"><rect><x>654</x><y>53</y><width>47</width><height>21</height></rect></property>
+        <property name="text"><string>Select</string></property>
+        <property name="toolTip"><string>Click here to select a file</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot2_SelectFileClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot2_LastUsed">
+        <property name="geometry"><rect><x>703</x><y>53</y><width>64</width><height>21</height></rect></property>
+        <property name="text"><string>Last Used</string></property>
+        <property name="toolTip"><string>Select last used memory card file (might not be the newest)</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot2_LastUsedClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonInsertMemoryCard_Slot2_Clear">
+        <property name="geometry"><rect><x>769</x><y>53</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Clear</string></property>
+        <property name="toolTip"><string>Click here to empty this memcard slot</string></property>
+        <property name="enabled"><bool>false</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonInsertMemoryCard_Slot2_ClearClick</string></property>
+      </widget>
+      <widget class="QTreeView" name="MemoryCardListView">
+        <property name="geometry"><rect><x>8</x><y>135</y><width>803</width><height>178</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+        <property name="vclOnDblClick" stdset="0"><string notr="true">MemoryCardListViewDblClick</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelDisabledMemoryCard">
+        <property name="geometry"><rect><x>104</x><y>0</y><width>89</width><height>11</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="Panel4_RecordMovie">
+      <property name="geometry"><rect><x>832</x><y>512</y><width>819</width><height>345</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#c0c0c0</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelRecordMovieFileName">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>8</x><y>319</y><width>200</width><height>16</height></rect></property>
+        <property name="text"><string>File to Save (file extension optional)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelRecordMovieRootFolder">
+        <property name="geometry"><rect><x>234</x><y>23</y><width>575</width><height>19</height></rect></property>
+        <property name="text"><string>Root folder:</string></property>
+        <property name="toolTip"><string>Root folder:</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etPathEllips</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelRecordMovieSelectedFileFolder">
+        <property name="geometry"><rect><x>8</x><y>289</y><width>803</width><height>25</height></rect></property>
+        <property name="text"><string> Folder of selected file...</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#808080</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclLayout" stdset="0"><string notr="true">tlCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etPathEllips</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true">lfrLeft,lfrRight,lfrBottom</string></property>
+      </widget>
+      <widget class="QCheckBox" name="Enabled_RecordMovie">
+        <property name="geometry"><rect><x>24</x><y>2</y><width>64</width><height>18</height></rect></property>
+        <property name="text"><string>Enabled</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeCheckBoxEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">Enabled_RecordMovieClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonRecordMovieResetFileNameTitle">
+        <property name="geometry"><rect><x>731</x><y>316</y><width>80</width><height>21</height></rect></property>
+        <property name="text"><string>Reset to Title</string></property>
+        <property name="toolTip"><string>Click here to reset filename to game title (no unicode support)</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonRecordMovieResetFileNameClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonRecordMovieResetFileName">
+        <property name="geometry"><rect><x>686</x><y>316</y><width>43</width><height>21</height></rect></property>
+        <property name="text"><string>Reset</string></property>
+        <property name="toolTip"><string>Click here to reset filename to game name</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonRecordMovieResetFileNameClick</string></property>
+      </widget>
+      <widget class="QLineEdit" name="RecordMovieFileName">
+        <property name="geometry"><rect><x>211</x><y>316</y><width>473</width><height>21</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEditEx</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnChange" stdset="0"><string notr="true">RecordMovieFileNameChange</string></property>
+        <property name="vclOnKeyPress" stdset="0"><string notr="true">RecordMovieFileNameKeyPress</string></property>
+      </widget>
+      <widget class="QRadioButton" name="RecordMovieWAV">
+        <property name="geometry"><rect><x>155</x><y>22</y><width>72</width><height>18</height></rect></property>
+        <property name="text"><string>WAV File</string></property>
+        <property name="vclTag" stdset="0"><number>2</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">RecordMovieAVIClick</string></property>
+      </widget>
+      <widget class="QRadioButton" name="RecordMovieMNG">
+        <property name="geometry"><rect><x>76</x><y>22</y><width>73</width><height>18</height></rect></property>
+        <property name="text"><string>MNG File</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">RecordMovieAVIClick</string></property>
+      </widget>
+      <widget class="QRadioButton" name="RecordMovieAVI">
+        <property name="geometry"><rect><x>8</x><y>22</y><width>64</width><height>18</height></rect></property>
+        <property name="text"><string>AVI File</string></property>
+        <property name="toolTip"><string>Uncompressed video/audio, huge space disk required!</string></property>
+        <property name="checked"><bool>true</bool></property>
+        <property name="vclClass" stdset="0"><string notr="true">TAdvOfficeRadioButtonEx</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">RecordMovieAVIClick</string></property>
+      </widget>
+      <widget class="QTreeView" name="RecordMovieListView">
+        <property name="geometry"><rect><x>8</x><y>42</y><width>803</width><height>248</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelDisabledRecordMovie">
+        <property name="geometry"><rect><x>100</x><y>1</y><width>89</width><height>11</height></rect></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#c0c0c0</string></property>
+        <property name="vclBevelOuter" stdset="0"><string notr="true">bvNone</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElImage</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+    <customwidget><class>ElShape</class><extends>QFrame</extends><header>ElWidgets.h</header></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>

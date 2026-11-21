@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>FormLastPlayedGames</class>
+  <widget class="QWidget" name="FormLastPlayedGames">
+    <property name="geometry"><rect><x>0</x><y>0</y><width>1178</width><height>966</height></rect></property>
+    <property name="windowTitle"><string>Last Played Games [Top 25]</string></property>
+    <property name="vclClass" stdset="0"><string notr="true">TFormLastPlayedGames</string></property>
+    <property name="vclColor" stdset="0"><string notr="true">#ffffff</string></property>
+    <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+    <property name="vclFontPx" stdset="0"><number>12</number></property>
+    <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+    <property name="vclBorderStyle" stdset="0"><string notr="true">bsSingle</string></property>
+    <property name="vclOnKeyPress" stdset="0"><string notr="true">FormKeyPress</string></property>
+    <widget class="ElPanel" name="PanelGames">
+      <property name="geometry"><rect><x>0</x><y>344</y><width>1178</width><height>580</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#e6e6e6</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSolid</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="QTreeView" name="LastPlayedList">
+        <property name="geometry"><rect><x>0</x><y>18</y><width>1178</width><height>564</height></rect></property>
+        <property name="vclTag" stdset="0"><number>-1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TEasyListview</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#f1f1f1</string></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Segoe UI</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclBorderStyle" stdset="0"><string notr="true">bsNone</string></property>
+        <property name="vclOnDblClick" stdset="0"><string notr="true">LastPlayedListDblClick</string></property>
+      </widget>
+      <widget class="ElPanel" name="PanelPlayedListHeader">
+        <property name="geometry"><rect><x>0</x><y>0</y><width>1178</width><height>20</height></rect></property>
+        <property name="vclAlign" stdset="0"><string notr="true">alTop</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+        <property name="vclColor1" stdset="0"><string notr="true">#dde8dd</string></property>
+        <property name="vclColor2" stdset="0"><string notr="true">#f1f1f1</string></property>
+        <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+        <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+        <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        <widget class="ElLabel" name="LabelTitleCaption">
+          <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+          <property name="geometry"><rect><x>14</x><y>6</y><width>25</width><height>14</height></rect></property>
+          <property name="text"><string>Title</string></property>
+          <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+          <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+          <property name="vclFontPx" stdset="0"><number>11</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+          <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+          <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+          <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        </widget>
+        <widget class="ElLabel" name="LabelLastPlayed">
+          <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+          <property name="geometry"><rect><x>910</x><y>6</y><width>66</width><height>14</height></rect></property>
+          <property name="text"><string>Last Played</string></property>
+          <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+          <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+          <property name="vclFontPx" stdset="0"><number>11</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+          <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+          <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+          <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        </widget>
+        <widget class="ElLabel" name="LabelTotalPlaytime">
+          <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+          <property name="geometry"><rect><x>1034</x><y>6</y><width>81</width><height>14</height></rect></property>
+          <property name="text"><string>Total Playtime</string></property>
+          <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+          <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+          <property name="vclFontPx" stdset="0"><number>11</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+          <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+          <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+          <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        </widget>
+        <widget class="ElLabel" name="LabelSoftwareTitleCaption">
+          <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+          <property name="geometry"><rect><x>730</x><y>6</y><width>80</width><height>14</height></rect></property>
+          <property name="text"><string>Software Title</string></property>
+          <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+          <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+          <property name="vclFontPx" stdset="0"><number>11</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+          <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+          <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+          <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        </widget>
+        <widget class="ElLabel" name="LabelGameNameCaption">
+          <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+          <property name="geometry"><rect><x>591</x><y>6</y><width>72</width><height>14</height></rect></property>
+          <property name="text"><string>Game Name</string></property>
+          <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+          <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+          <property name="vclFontName" stdset="0"><string notr="true">Verdana</string></property>
+          <property name="vclFontPx" stdset="0"><number>11</number></property>
+          <property name="vclFontColor" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+          <property name="vclShadowColor" stdset="0"><string notr="true">#808080</string></property>
+          <property name="vclShadowEnabled" stdset="0"><string notr="true">False</string></property>
+          <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+          <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+        </widget>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelSystemsTitle">
+      <property name="geometry"><rect><x>0</x><y>328</y><width>1178</width><height>16</height></rect></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#ffffff</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#dde8dd</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#ffff00</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#008080</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElLabel" name="LabelSystemTitle">
+        <property name="geometry"><rect><x>314</x><y>0</y><width>550</width><height>16</height></rect></property>
+        <property name="text"><string notr="true">MAME</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#800000</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclAlignment" stdset="0"><string notr="true">taCenter</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">True</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+      <widget class="ElLabel" name="LabelSystemType">
+        <property name="vclAutoSize" stdset="0"><bool>true</bool></property>
+        <property name="geometry"><rect><x>32</x><y>0</y><width>46</width><height>19</height></rect></property>
+        <property name="text"><string>ARCADE</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TShadowLabel</string></property>
+        <property name="vclColor" stdset="0"><string notr="true">#fafafa</string></property>
+        <property name="vclTransparent" stdset="0"><bool>true</bool></property>
+        <property name="vclFontName" stdset="0"><string notr="true">Trebuchet MS</string></property>
+        <property name="vclFontPx" stdset="0"><number>12</number></property>
+        <property name="vclFontColor" stdset="0"><string notr="true">#0000ff</string></property>
+        <property name="vclFontStyle" stdset="0"><string notr="true">fsBold</string></property>
+        <property name="vclColorFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclColorInnerFrame" stdset="0"><string notr="true">#000000</string></property>
+        <property name="vclShadowColor" stdset="0"><string notr="true">#dddddd</string></property>
+        <property name="vclShadowEnabled" stdset="0"><string notr="true">True</string></property>
+        <property name="vclEllipsType" stdset="0"><string notr="true">etNone</string></property>
+        <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      </widget>
+    </widget>
+    <widget class="ElPanel" name="PanelBottom">
+      <property name="geometry"><rect><x>0</x><y>924</y><width>1178</width><height>42</height></rect></property>
+      <property name="vclAlign" stdset="0"><string notr="true">alBottom</string></property>
+      <property name="vclClass" stdset="0"><string notr="true">TPanelEx</string></property>
+      <property name="vclColor1" stdset="0"><string notr="true">#f1f1f1</string></property>
+      <property name="vclColor2" stdset="0"><string notr="true">#dddddd</string></property>
+      <property name="vclColor3" stdset="0"><string notr="true">#dddddd</string></property>
+      <property name="vclColor4" stdset="0"><string notr="true">#dfdfdf</string></property>
+      <property name="vclColorFrame" stdset="0"><string notr="true">#5b6978</string></property>
+      <property name="vclColorInnerFrame" stdset="0"><string notr="true">#008000</string></property>
+      <property name="vclStyle" stdset="0"><string notr="true">vgSimple</string></property>
+      <property name="vclFrames" stdset="0"><string notr="true"></string></property>
+      <widget class="ElButton" name="ButtonSelectGame">
+        <property name="geometry"><rect><x>420</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Select Game</string></property>
+        <property name="toolTip"><string>Select current game in main games list
+(ENTER key or mouse double-click shortcuts)</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonSelectGameClick</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonClose">
+        <property name="geometry"><rect><x>668</x><y>8</y><width>89</width><height>25</height></rect></property>
+        <property name="text"><string>Close</string></property>
+        <property name="toolTip"><string>Close this dialog</string></property>
+        <property name="vclModalResult" stdset="0"><string notr="true">1</string></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+      </widget>
+      <widget class="ElButton" name="ButtonSelectGameExit">
+        <property name="geometry"><rect><x>524</x><y>8</y><width>140</width><height>25</height></rect></property>
+        <property name="text"><string>Select Game and Exit</string></property>
+        <property name="toolTip"><string>Select current game in main games list and close this dialog</string></property>
+        <property name="vclTag" stdset="0"><number>1</number></property>
+        <property name="vclClass" stdset="0"><string notr="true">TBitBtnEx</string></property>
+        <property name="vclOnClick" stdset="0"><string notr="true">ButtonSelectGameClick</string></property>
+      </widget>
+    </widget>
+  </widget>
+  <customwidgets>
+    <customwidget><class>ElButton</class><extends>QPushButton</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElLabel</class><extends>QLabel</extends><header>ElWidgets.h</header></customwidget>
+    <customwidget><class>ElPanel</class><extends>QFrame</extends><header>ElWidgets.h</header><container>1</container></customwidget>
+  </customwidgets>
+  <resources/><connections/>
+</ui>
