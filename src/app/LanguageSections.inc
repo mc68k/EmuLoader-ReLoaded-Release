@@ -4,6 +4,8 @@
 // Keep one entry per line: {"program name", "section"},
 {"Menus", "Menus"},
 {"eld::MainWindow", "Main Window"},
+{"eld::UpdateInstall", "Main Window"},
+{"eld::AboutDialog", "About"},
 {"FormMain", "Main Window"},
 {"ToolBar", "Tool Bar"},
 {"eld::GamesModel", "Games List"},

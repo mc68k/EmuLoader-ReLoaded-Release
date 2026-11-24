@@ -4,6 +4,7 @@
 // (EmuLoader.ini, arcade\games\, resources\). To use an existing EmuLoader
 // installation, run with  --data "C:\Path\To\EmuLoader"  or put this program in
 // that folder.
+#include "UpdateInstall.h"
 #include "FirstStart.h"
 #include "SplashScreen.h"
 #include "Frontend.h"
@@ -65,9 +66,12 @@ int main(int argc, char** argv) {
     cli.addHelpOption();
     cli.addOption({"data", "EmuLoader data folder (an existing EmuLoader installation works).", "folder"});
     cli.addOption({"debug-log", "Write EmuLoaderRL\\diagnostic.log, whatever Preferences says."});
+    // Install Update starts the new version with this, while the old one is still closing
+    cli.addOption({"after-update", "Started by Install Update: waits for the version it replaced to close."});
     cli.process(app);
 
     QString appDir = QCoreApplication::applicationDirPath();
+    eld::UpdateInstall::cleanUp(appDir); // (an update's download folder)
     QString data = cli.value("data");
     if (data.isEmpty()) {
         // Portable by default, like the original; fall back to a per-user folder if the
@@ -133,7 +137,8 @@ int main(int argc, char** argv) {
     // on the same data folder brings the running window to the front and exits.
     QLockFile lock(QDir(data).filePath("EmuLoaderRL.lock"));
     QString signal = QDir(data).filePath("EmuLoaderRL.activate");
-    if (fe.ini().readBool("Preferences", "AllowOneInstance", true) && !lock.tryLock(0)) {
+    // (after an update: the version it replaced may still be closing, holding the lock)
+    if (fe.ini().readBool("Preferences", "AllowOneInstance", true) && !lock.tryLock(cli.isSet("after-update") ? 30000 : 0)) {
         if (lock.error() == QLockFile::LockFailedError) {
 #ifdef Q_OS_WIN
             AllowSetForegroundWindow(ASFW_ANY); // the running instance may take the focus

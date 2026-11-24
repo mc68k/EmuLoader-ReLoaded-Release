@@ -1,5 +1,6 @@
 #include "UpdateCheck.h"
 
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QRegularExpression>
@@ -34,7 +35,20 @@ Answer parse(const QByteArray& json, Release* out, QString* error) {
         out->tag = tag;
         out->name = o.value("name").toString();
         out->page = o.value("html_url").toString();
+        out->notes = o.value("body").toString();
         out->prerelease = o.value("prerelease").toBool();
+        out->zip = {};
+        for (const QJsonValue& v : o.value("assets").toArray()) {
+            const QJsonObject a = v.toObject();
+            const QString name = a.value("name").toString();
+            if (!name.endsWith("-windows.zip", Qt::CaseInsensitive)) continue;
+            out->zip.name = name;
+            out->zip.url = a.value("browser_download_url").toString();
+            out->zip.size = qint64(a.value("size").toDouble());
+            const QString digest = a.value("digest").toString();
+            if (digest.startsWith("sha256:", Qt::CaseInsensitive)) out->zip.sha256 = digest.mid(7).toLower();
+            break;
+        }
     }
     return Answer::Release;
 }

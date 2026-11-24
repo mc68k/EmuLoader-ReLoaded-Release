@@ -363,7 +363,7 @@ FindSettingDialog::FindSettingDialog(QList<SettingEntry> entries, const QString&
     list_->header()->setStretchLastSection(true);
     list_->setColumnWidth(0, 330);
     lay->addWidget(list_, 1);
-    auto* note = new QLabel(tr("Grayed out: not ported yet, or not available in your MAME version."), this);
+    auto* note = new QLabel(tr("Grayed out: not available now, or not in your MAME version."), this);
     note->setEnabled(false);
     lay->addWidget(note);
     auto* buttons = new QDialogButtonBox(this);

@@ -6,7 +6,9 @@
 #include "VclRuntime.h"
 #include "SettingsLayout.h"
 
+#include <QApplication>
 #include <QCheckBox>
+#include <QClipboard>
 #include <QComboBox>
 #include <QDir>
 #include <QFile>
@@ -15,6 +17,7 @@
 #include <QHBoxLayout>
 #include <QInputDialog>
 #include <QLineEdit>
+#include <QMenu>
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QPushButton>
@@ -34,6 +37,22 @@ NightModeDialog::NightModeDialog(const Input& in, QWidget* parent) : QDialog(par
             if (int* v = nm_.intValue(c->objectName())) *v = c->tcolor();
             changed();
         });
+        // PopupNightModeCopyPasteColor: copy a color, paste it on another
+        if (in_.colorMenu) {
+            c->setContextMenuPolicy(Qt::CustomContextMenu);
+            connect(c, &QWidget::customContextMenuRequested, this, [this, c](const QPoint& at) {
+                colorTarget_ = c->objectName();
+                if (QAction* paste = in_.colorMenu->findChild<QAction*>("PopupNightModePasteColor"))
+                    paste->setEnabled(QColor::fromString(QApplication::clipboard()->text().trimmed()).isValid());
+                in_.colorMenu->exec(c->mapToGlobal(at));
+            });
+        }
+    }
+    if (in_.colorMenu) { // (the menu is the main window's: these go with this window)
+        if (QAction* copy = in_.colorMenu->findChild<QAction*>("PopupNightModeCopyColor"))
+            connect(copy, &QAction::triggered, this, [this] { copyColor(colorTarget_); });
+        if (QAction* paste = in_.colorMenu->findChild<QAction*>("PopupNightModePasteColor"))
+            connect(paste, &QAction::triggered, this, [this] { pasteColor(colorTarget_); });
     }
     for (QCheckBox* c : findChildren<QCheckBox*>())
         connect(c, &QCheckBox::toggled, this, [this, c](bool on) {
@@ -389,6 +408,28 @@ void NightModeDialog::setColor(const QString& control, int tcolor) {
     if (auto* c = findChild<ElColorBox*>(control)) c->setTColor(tcolor);
     if (int* v = nm_.intValue(control)) *v = tcolor;
     changed();
+}
+
+// The copied color, so a system color (the Windows button face, ...) is pasted as itself, not
+// as the RGB it has now.
+static QString copiedName;
+static int copiedTColor = 0;
+
+void NightModeDialog::copyColor(const QString& control) {
+    auto* c = findChild<ElColorBox*>(control);
+    if (!c) return;
+    copiedTColor = c->tcolor();
+    copiedName = c->color().name();
+    QApplication::clipboard()->setText(copiedName);
+}
+
+bool NightModeDialog::pasteColor(const QString& control) {
+    const QString text = QApplication::clipboard()->text().trimmed();
+    const QColor col = QColor::fromString(text);
+    if (!col.isValid() || !findChild<ElColorBox*>(control)) return false;
+    setColor(control, text.compare(copiedName, Qt::CaseInsensitive) == 0 && !copiedName.isEmpty()
+                          ? copiedTColor : ElColorBox::fromQColor(col));
+    return true;
 }
 
 void NightModeDialog::selectProfile(const QString& name) {

@@ -1,7 +1,7 @@
 // UpdateCheck - is there a newer EmuLoader ReLoaded? The latest release of the public release
 // repository on GitHub (its tag, "v1.0.0"), compared with the running version. Only the version
-// number is asked for: nothing about the user or their games is sent. Nothing is downloaded or
-// installed; the user is offered the release's page.
+// number is asked for: nothing about the user or their games is sent. The answer also gives the
+// release's notes and its Windows zip, which Install Update downloads (UpdateInstall).
 #pragma once
 
 #include <QByteArray>
@@ -20,7 +20,15 @@ struct Release {
     QString tag;      // "v1.1.0"
     QString name;     // the release's title ("EmuLoader ReLoaded 1.1")
     QString page;     // the release's page (html_url)
+    QString notes;    // what's new (the release's text, Markdown)
     bool prerelease = false;
+    // the Windows zip ("EmuLoader-ReLoaded-1.2.0-windows.zip"): empty url when there's none
+    struct Zip {
+        QString name;
+        QString url;     // browser_download_url
+        qint64 size = 0;
+        QString sha256;  // lowercase hex, from GitHub's "digest" ("sha256:..."); empty when not given
+    } zip;
 };
 
 enum class Answer { Release, NoneYet, Unreadable };

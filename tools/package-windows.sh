@@ -42,6 +42,7 @@ cp -r "$B/data_template" "$OUT/"
 cp "$SRC/README.md" "$OUT/"
 # the guide, with this build under its title
 sed "s|<p class=\"build\">Build: dev</p>|<p class=\"build\">Build: $REV</p>|" "$SRC/docs/EmuLoader-ReLoaded-Guide.html" > "$OUT/EmuLoader-ReLoaded-Guide.html"
+cp -r "$SRC/docs/guide-images" "$OUT/"
 # Press Start 2P is built into EmuLoader-ReLoaded.exe (the splash screen's arcade lettering); its
 # license (SIL Open Font License) goes with it
 mkdir -p "$OUT/licenses"

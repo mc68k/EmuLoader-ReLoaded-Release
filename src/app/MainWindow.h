@@ -1,6 +1,7 @@
 // MainWindow - port of EmuLoader's TFormMain (uMain.pas) for the MAME family.
 #pragma once
 
+#include "UpdateCheck.h"
 #include "ElDatabase.h"
 #include "RomAudit.h"
 #include "Frontend.h"
@@ -160,6 +161,7 @@ private:
                                ParamsSoftwareList = CustomParametersDialog::SoftwareList, ParamsMachine = CustomParametersDialog::Machine;
     QString customParamsFile(const MameGame& g, ParamsFor what) const; // "" when it doesn't apply
     void customParameters(ParamsFor what, bool remove);
+    void customParametersButton(); // the tool bar's Parameters button
     void prepareCustomParamsMenu(const MameGame& g);
     void updateStatus();
     void updateImage();
@@ -183,6 +185,7 @@ private:
     QStringList toolOrder_;
     QList<QWidget*> toolSeparators_;
     QStringList toolOriginalOrder() const; // the original's buttons, all shown (8.9.4)
+    static bool removedToolButton(const QString& name); // the original's, for other emulators: never shown
     QStringList toolDefaultOrder() const;  // the same, then a space and the Guide button
     void loadToolOrder();
     void setToolOrder(const QStringList& order, bool save = true);
@@ -215,6 +218,12 @@ private:
     bool sevenZipAsked_ = false;
     void setupUpdateCheck();
     bool updateChecking_ = false;
+    // Install Update: the release's zip downloaded, checked and put in place, then EmuLoader
+    // restarted on the new version (MainWindowUpdates.cpp)
+    void installUpdate(const UpdateCheck::Release& release);
+    void restartAfterUpdate(const QString& version, const QString& programDir);
+    // fn run once nothing else is shown (the splash screen, another window's question)
+    void whenNothingShown(std::function<void()> fn);
     // The main CPU filter's row under the tool bar (MainWindowToolBar.cpp)
     void setupCpuFilter();
     void showCpuFilter(bool on);

@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.19)
 # EmuLoader ReLoaded: the version is set here only. EL_VERSION_LABEL is what people see
 # ("1.0.0"); the numbers go into the Windows file properties.
-project(EmuLoaderRL VERSION 1.0.0 LANGUAGES C CXX)
+project(EmuLoaderRL VERSION 1.1.1 LANGUAGES C CXX)
 set(EL_PRODUCT_NAME "EmuLoader ReLoaded")
-set(EL_VERSION_LABEL "1.0.0")
+set(EL_VERSION_LABEL "1.1.1")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -54,6 +54,7 @@ add_library(el_core STATIC
   src/core/ChdCheck.cpp
   src/core/SevenZip.cpp
   src/core/UpdateCheck.cpp
+  src/core/UpdateInstall.cpp
   third_party/miniz/miniz.c)
 # The 7z decoder of the LZMA SDK (public domain): .7z picture and icon archives (SevenZip.cpp)
 add_library(el_lzma STATIC
@@ -97,6 +98,7 @@ add_library(el_app STATIC
   src/app/SplashCustomizeDialog.cpp
   src/app/RomsFoldersDialog.cpp
   src/app/FileVersionsDialog.cpp
+  src/app/AboutDialog.cpp
   src/app/ExportGamesDialog.cpp
   src/app/ScanSamplesDialog.cpp
   src/app/ColumnsEditorDialog.cpp
@@ -157,6 +159,7 @@ add_library(el_app STATIC
   src/app/MainWindowSevenZip.cpp
   src/app/MainWindowUpdates.cpp
   src/app/UpdateFetch.cpp
+  src/app/UpdateDownload.cpp
   src/app/ToolBarCustomizer.cpp
   src/app/MainWindowSettings.cpp
   src/app/SettingsDialog.cpp
@@ -233,6 +236,7 @@ endif()
 add_custom_command(TARGET emuloader POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/data_template $<TARGET_FILE_DIR:emuloader>/data_template
   COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_SOURCE_DIR}/docs/EmuLoader-ReLoaded-Guide.html $<TARGET_FILE_DIR:emuloader>/EmuLoader-ReLoaded-Guide.html
+  COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/docs/guide-images $<TARGET_FILE_DIR:emuloader>/guide-images
   COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/lang $<TARGET_FILE_DIR:emuloader>/lang)
 
 # ------------------------------------------- form preview tool (development)

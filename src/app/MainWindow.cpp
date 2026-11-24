@@ -1,4 +1,6 @@
 #include "MainWindow.h"
+
+#include "AboutDialog.h"
 #include "ScriptFonts.h"
 #include "FileProblem.h"
 #include "DiagnosticLog.h"
@@ -528,6 +530,14 @@ void MainWindow::setupToolBar() {
             connect(b, &QPushButton::clicked, this, &MainWindow::showLastPlayed);
             continue;
         }
+        if (b == ui_->ButtonCustomEmuParameterToUse) {
+            // The original's "Emulator Parameters To Use" was for other emulators: here it opens the
+            // selected game's custom parameters (as the games list menu's Set Game Parameters).
+            b->setProperty("elDesignText", tr("Custom Parameters-Selected Game"));
+            b->setToolTip(tr("Custom parameters for the selected game"));
+            connect(b, &QPushButton::clicked, this, &MainWindow::customParametersButton);
+            continue;
+        }
         QString menu = b->property("vclDropdownMenu").toString();
         if (QMenu* m = menus_.menu(menu)) {
             b->setProperty("elMenu", QVariant::fromValue<QObject*>(m)); // for the » menu
@@ -828,11 +838,22 @@ void MainWindow::setupMenus() {
     }
     setupUpdateCheck(); // Help > Check for Updates, and the weekly check
     menus_.on("MenuAbout", [this] {
-        QMessageBox::about(this, tr("About %1").arg(QStringLiteral(EL_PRODUCT_NAME)),
-                           QStringLiteral("<b>" EL_PRODUCT_NAME "</b> " EL_VERSION_LABEL "<br>") +
-                               tr("Build: %1").arg(QStringLiteral(EL_BUILD_REV)) + "<br>" + tr("C++/Qt port (MAME family)<br><br>A community continuation of EmuLoader, originally"
-                              " created by Ciro Alfredo Consentino (1974–2021). Ported from his Emuloader v8.9.4.<br><br>Data folder: %1").arg(QDir::toNativeSeparators(fe_.dataDir())) +
-                               "<br>" + tr("Settings folder: %1").arg(QDir::toNativeSeparators(fe_.userDir())));
+        AboutDialog::Input in;
+        in.icon = QDir(fe_.dataDir()).filePath("EmuLoader.ico");
+        auto emulator = [this](SystemId id) {
+            if (fe_.emulatorFile(id).isEmpty()) return QString();
+            const QString v = fe_.emulatorVersion(id);
+            return v.isEmpty() ? Frontend::section(id) : v;
+        };
+        in.mame = emulator(SystemId::MAME);
+        in.hbmame = emulator(SystemId::HBMAME);
+        in.dataFolder = fe_.dataDir();
+        in.settingsFolder = fe_.userDir();
+        in.licensesFolder = QDir(programFolder()).filePath("licenses");
+        in.openGuide = [this] { openGuide(); };
+        in.checkForUpdates = [this] { checkForUpdates(true); };
+        AboutDialog dlg(in, this);
+        dlg.exec();
     });
 
     // Games list popup
@@ -1104,6 +1125,8 @@ void MainWindow::setupMenus() {
         applyNight(a && a->isChecked());
     });
     menus_.on("MenuCustomizeNightModeColors", [this] { openSettings("Night Mode"); });
+    // Games List Appearance: the light mode colors (the original's Preferences page 2)
+    menus_.on("MenuCustomizeGamesListAppearance", [this] { openSettings("Colors"); });
     // Show Players Info From nplayers.ini Only ([Preferences] PlayersInfoFromIniOnly)
     if (QAction* a = menus_.action("MenuShowPlayersInfoFromNplayersIniOnly")) {
         a->setCheckable(true);
@@ -1157,10 +1180,31 @@ void MainWindow::setupMenus() {
         menus_.on(e.del, [this, level, adjust] { openCustomSettings(level, true, adjust); });
     }
 
+    // Browse Games With: the keyboard and mouse only. The original's modes for arcade controllers
+    // (Devastator II, Hot Rod SE, SlikStik, X-Arcade) and their layout pictures are left out: such
+    // controllers are set up as a keyboard today.
+    if (QAction* a = menus_.action("MenuArcadeControlKeyboardMouse")) a->setChecked(true);
+    menus_.on("MenuArcadeControlKeyboardMouse", [this] {
+        if (QAction* a = menus_.action("MenuArcadeControlKeyboardMouse")) a->setChecked(true);
+    });
+    if (QAction* sub = menus_.action("MenuArcadeBrowseGames"); sub && sub->menu())
+        for (QAction* a : sub->menu()->actions())
+            if (a->isSeparator()) a->setVisible(false);
+
+    // night mode's color boxes show these and do the copying (NightModeDialog)
+    menus_.on("PopupNightModeCopyColor", [] {});
+    menus_.on("PopupNightModePasteColor", [] {});
+
     // Console/computer systems and other emulators are outside this port's scope.
     menus_.disableUnhandled({"MenuConsoleComputer", "PopupRunConsoleComputerGameWithMAME",
                              "PopupPlayGameWithCustomSystem",
                              "PopupEnableAutoRunCustomGamesWithMAME", "CreateSupermodelXMLdatFromSourceFile1",
+                             "MenuArcadeControlDevastator2", "MenuArcadeControlHotRodSE", "MenuArcadeControlSlikStik",
+                             "MenuArcadeControlXArcade", "MenuArcadeControlSlikStik_SwapStick",
+                             "MenuArcadeControllersLayout",
+                             // the tool bar's Parameters button opens the game's parameters instead
+                             "MenuParametersCustomSystemTitle", "MenuParametersSystemSeparator",
+                             "PopupUseCustomEmuParameter1", "PopupUseCustomEmuParameter2",
                              "getsnaps1", "MenuValidateMAMECHDTypes", "Menu4KModeDisable", "Menu4KModeReadMe",
                              // hidden in the original too
                              "PopupEditDriverCustomParameters", "PopupDeleteDriverCustomParameters",
@@ -1605,6 +1649,7 @@ void MainWindow::addNightModePage(SettingsDialog& s, QVector<std::function<void(
         nightMode_ = nm;
         showNight(true, nm.look);
     };
+    in.colorMenu = menus_.menu("PopupNightModeCopyPasteColor");
     auto* dlg = new NightModeDialog(in, &s);
     s.addDialog(tr("Night Mode"), dlg, "", "");
 }
@@ -3635,6 +3680,19 @@ QString MainWindow::customParamsFile(const MameGame& g, ParamsFor what) const {
     }
     }
     return {};
+}
+
+// The tool bar's Parameters button: the selected game's custom parameters. MAME only, one game,
+// not a device, as the games list's menu.
+void MainWindow::customParametersButton() {
+    const MameGame* g = current();
+    const bool single = list_->selectionModel()->selectedRows().size() <= 1;
+    if (!g || !single || sys_ != SystemId::MAME || g->kind == SetKind::Device) {
+        QMessageBox::information(this, tr("Custom Parameters"),
+                                 tr("Custom parameters are for one MAME game: select a game in the MAME games list."));
+        return;
+    }
+    customParameters(ParamsGame, false);
 }
 
 // PopupEditGameCustomParametersClick / PopupDeleteGameCustomParametersClick (and the parent's,

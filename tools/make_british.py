@@ -28,6 +28,7 @@ def add(us, uk, suffixes=("",)):
 add("color", "colour", ("", "s", "ed", "ing", "ful", "less"))
 add("gray", "grey", ("", "s", "ed", "ing", "scale", "ish"))
 add("center", "centre", ("", "s"))
+add("license", "licence", ("", "s"))   # the noun (the verb stays "license"; none in the texts yet)
 WORDS.update({"centered": "centred", "centering": "centring"})
 add("behavior", "behaviour", ("", "s", "al"))
 add("neighbor", "neighbour", ("", "s", "ing", "hood"))

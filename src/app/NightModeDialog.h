@@ -26,6 +26,7 @@ public:
         QString profile;                                 // the profile in use
         std::function<void(const QString& profile)> apply; // the program with this profile's file
         std::function<void(const NightMode&)> preview;   // the program with these colors (not saved)
+        class QMenu* colorMenu = nullptr;                // a color's right-click menu (PopupNightModeCopyPasteColor)
     };
     explicit NightModeDialog(const Input& in, QWidget* parent = nullptr);
     ~NightModeDialog() override;
@@ -35,6 +36,8 @@ public:
     bool modified() const { return modified_; }
     bool saveProfile();                       // Save
     void setColor(const QString& control, int tcolor); // as if chosen
+    void copyColor(const QString& control);  // Copy Color: to the clipboard (#rrggbb)
+    bool pasteColor(const QString& control); // Paste Color: the clipboard's color, if it holds one
     void selectProfile(const QString& name);
     bool newProfile(const QString& name, bool copyColors);
     bool deleteProfile();
@@ -44,6 +47,7 @@ protected:
 
 private:
     QString fileOf(const QString& profile) const;
+    QString colorTarget_; // the color right-clicked (Copy Color, Paste Color)
     void loadProfile(const QString& name);
     void show(const NightMode& nm);           // the controls from the colors
     void changed();

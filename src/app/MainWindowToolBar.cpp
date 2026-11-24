@@ -28,9 +28,16 @@
 
 namespace eld {
 
+// The original's buttons for console and computer games run by other emulators (outside this
+// version): never shown or offered. Their GamesFilters_Buttons flags are kept for the original.
+bool MainWindow::removedToolButton(const QString& name) {
+    return name == QLatin1String("ButtonImageCUE") || name == QLatin1String("ButtonCustomSelectDefaultEmulators");
+}
+
 QStringList MainWindow::toolOriginalOrder() const {
     QStringList out;
-    for (ElButton* b : toolBarButtons()) out << b->objectName();
+    for (ElButton* b : toolBarButtons())
+        if (!removedToolButton(b->objectName())) out << b->objectName();
     return out;
 }
 
@@ -51,7 +58,7 @@ void MainWindow::loadToolOrder() {
         }
     } else { // first start: the original's buttons as GamesFilters_Buttons shows them, then the guide
         for (ElButton* b : toolBarButtons())
-            if (b->property("elShown").toBool()) order << b->objectName();
+            if (b->property("elShown").toBool() && !removedToolButton(b->objectName())) order << b->objectName();
         order << "space" << "ButtonMameProblems" << "ButtonGuide";
     }
     fe_.ini().writeBool("EmuLoaderRL", "ToolBarProblemsAdded", true);
@@ -69,13 +76,17 @@ void MainWindow::setToolOrder(const QStringList& order, bool save) {
             clean << t;
             continue;
         }
-        if (!byName.contains(t) || on.contains(t)) continue;
+        if (!byName.contains(t) || on.contains(t) || removedToolButton(t)) continue;
         on.insert(t);
         clean << t;
     }
     toolOrder_ = clean;
     for (auto it = byName.cbegin(); it != byName.cend(); ++it) {
         ElButton* b = it.value();
+        if (removedToolButton(it.key())) { // (elShown stays as the original has it)
+            b->setVisible(false);
+            continue;
+        }
         const bool shown = on.contains(it.key());
         b->setProperty("elShown", shown);
         b->setProperty("elOverflow", false);
@@ -304,7 +315,7 @@ void MainWindow::showCpuFilter(bool on) {
 void MainWindow::addToolBarPage(SettingsDialog& s, AfterSettings&) {
     ToolBarCustomizer::Input in;
     for (ElButton* b : ui_->ToolBarButtons->findChildren<ElButton*>()) {
-        if (b->objectName() == "ToolBarOverflow") continue;
+        if (b->objectName() == "ToolBarOverflow" || removedToolButton(b->objectName())) continue;
         QString text = b->property("elDesignText").toString();
         if (text.isEmpty()) text = b->toolTip().section('\n', 0, 0); // (Menu Options has no caption)
         ToolBarCustomizer::Tool t;

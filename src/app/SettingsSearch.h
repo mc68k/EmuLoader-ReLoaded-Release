@@ -26,7 +26,7 @@ struct SettingEntry {
     QString where;     // "Preferences › PAGE 1 › General"
     QString window;    // "preferences", "mame", "menu"
     QString target;    // object name of the control (or "<menu>/<action>" for menus)
-    bool available = true; // false: grayed out (not ported yet, or not in this MAME version)
+    bool available = true; // false: grayed out (not available now, or not in this MAME version)
 };
 
 namespace SettingsSearch {

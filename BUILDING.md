@@ -1,9 +1,9 @@
-# EmuLoader ReLoaded 1.0.0 — C++/Qt port (MAME family)
+# EmuLoader ReLoaded 1.1.1 — C++/Qt port (MAME family)
 
 *A community continuation of EmuLoader, originally created by Ciro Alfredo Consentino (1974–2021). Ported from his Emuloader v8.9.4.*
 
-Written in C++17 and Qt 6, scoped to MAME and HBMAME. It runs on Windows, Linux and macOS, and it reads and
-writes the same files as the Delphi EmuLoader, so an existing installation
+Written in C++17 and Qt 6, scoped to MAME and HBMAME. It is built and tested on Windows and Linux (the code is
+meant to build on macOS too), and it reads and writes the same files as the Delphi EmuLoader, so an existing installation
 can be used directly:
 
 ```
@@ -12,17 +12,13 @@ EmuLoader-ReLoaded.exe --data "C:\Games\EmuLoader"
 
 ## Windows quick start (prebuilt zip)
 
-1. Unzip `EmuLoader-ReLoaded-1.0.0-windows.zip` anywhere (not under Program Files).
+1. Unzip `EmuLoader-ReLoaded-1.1.1-windows.zip` anywhere (not under Program Files).
 2. To use your existing EmuLoader setup, either copy the *contents* of the
    `EmuLoader-ReLoaded` folder into your EmuLoader folder (it will not overwrite
    `EmuLoader.exe`; the new program is `EmuLoader-ReLoaded.exe`), or run it with
    `--data "C:\path\to\your\EmuLoader"`.
 3. To start fresh, just run `EmuLoader-ReLoaded.exe`, then Menu Options (the orb) >
-   MAME/Arcade > Emulators Setup, Select `mame.exe`, Ok, and let it create the list.
-4. Coming from an earlier beta: the program is now `EmuLoader-ReLoaded.exe` (it was
-   `EmuLoaderRL.exe`, and before that `EmuLoaderQt.exe`). Delete the old `.exe` and its
-   `-Guide.html`, and point any shortcut to the new name; your settings carry over (they stay
-   in the `EmuLoaderRL` folder).
+   MAME/Arcade > Emulators Setup, Select `mame.exe`, OK, and let it create the list.
 
 It keeps its own files in the `EmuLoaderRL` folder of your EmuLoader folder and
 never writes to the original's. The first time it starts, it copies your
@@ -31,10 +27,9 @@ settings from the original, then makes the games list again from MAME. MAME's
 own files (`mame.ini`, `ui.ini`, the `ini` folder) are shared, as they belong to
 MAME. In a folder of its own, the first start asks once for the
 folder of the original or of an earlier copy of EmuLoader ReLoaded to copy from
-(its whole `EmuLoaderRL` folder, then), or Skip. Make a backup copy of your EmuLoader folder anyway, since this is an early
-version.
+(its whole `EmuLoaderRL` folder, then), or Skip. Make a backup copy of your EmuLoader folder anyway.
 
-This is a work in progress. See **Porting status** below. The user guide,
+Every feature of the original is ported, except a few left out on purpose (see **Porting status** below). The user guide,
 `EmuLoader-ReLoaded-Guide.html` (also Help > EmuLoader ReLoaded User Guide, or F1), covers
 features, operation and the differences from the original.
 
@@ -96,7 +91,7 @@ build/EmuLoader-ReLoaded  # the program (EmuLoader-ReLoaded.exe on Windows)
   command prompt. Run `windeployqt build\EmuLoader-ReLoaded.exe` to collect the Qt
   DLLs.
 * **Cross-compiling from Linux:** `tools/package-windows.sh /path/to/qt6-for-mingw`
-  builds the Windows version and produces `dist/EmuLoader-ReLoaded-1.0.0-windows.zip`.
+  builds the Windows version and produces `dist/EmuLoader-ReLoaded-1.1.1-windows.zip`.
 * **Linux:** `apt install qt6-base-dev qt6-tools-dev cmake g++`.
 
 On first run, the program copies `data_template/` (EmuLoader's icons, images
@@ -122,7 +117,7 @@ in it, with the Delphi version's layout (`src/core/Frontend.h`):
 **Working**
 
 - Main window, converted from `uMain.dfm`. It has the original toolbar pictures and dropdown menus, the search box, the games list, the status bar and the snapshot panel.
-- Tool bar: the captions the original draws into the pictures (in English) are shown as text under them instead, translated and sharp at any display scaling (pictures from the 128×128 frames at 150–200%). Buttons widen to fit their caption (two lines past one and a half pictures); buttons that don't fit go into a » menu. Icon Size (Extra Large 68×68, Large 48×48, Small 30×24) works from Menu Options > Games List > Tool Bar Buttons; Large is the default, as in the original.
+- Tool bar: the captions the original draws into the pictures (in English) are shown as text under them instead, translated and sharp at any display scaling (pictures from the 128×128 frames at 150–200%). Buttons widen to fit their caption (two lines past one and a half pictures); buttons that don't fit go into a » menu. Icon Size (Extra Large 68×68, Large 48×48, Small 30×24) works from Menu Options > Games List > Tool Bar Buttons; Large is the default, as in the original. The Parameters button (the original's Emulator Parameters To Use) opens the selected game's custom parameters; the Load Game Using Metadata File (.cue) and Select Default Emulators buttons, for other emulators, are never shown (`MainWindow::removedToolButton`).
 - Games list with EmuLoader's icons (parent, clone, BIOS and device, colored for available and gray for missing) and red text for sets with missing ROMs. Columns can be sorted.
 - Filters: Have/Miss (all 6 modes), Parent/Clone, Driver Status (the Driver Status Filter window: driver, emulation, color, sound or graphics status; `[ListFilter] DriverStatusCategory`), Favorites, title search, Games Filters (the "All Games" button: `arcade\filters\mame_filters.ini`, by driver and BIOS, without the driver's folder so they work with MAME 0.2xx) and the Miscellaneous Filters (Misc button: ROMs, BIOS, devices, audio, controls, orientation, save state, cocktail, artwork, CHD, no dump, merged, CRC32 collisions, multi-slot machines, catver.ini categories; `ini_files\games_filters.ini` [Miscellaneous]; the ROM flags are worked out from `-listxml` when the list is made and kept as `<romflags>` in the .el) (`src/core/GameFilters.cpp`, `src/app/MiscFiltersDialog.cpp`, `src/app/GamesFiltersDialog.cpp`). Color, sound, graphics, protection and local network come from MAME's `<feature>` lines (MAME 0.190 and later) or the older `<driver>` attributes, and the games list saves them with the cocktail status as the original does (`clrstat`, `sndstat`, `grpstat`, `protectionstat`, `cocktailstat`, `lanstat`). The toolbar pictures and captions change to show the active filter.
 - Run Game (double-click, Enter or the menu). MAME starts from its own folder, and its exit code is reported.
@@ -138,21 +133,22 @@ in it, with the Delphi version's layout (`src/core/Frontend.h`):
 - Play statistics, in the original's `arcade\played_games\mame.txt` (`hbmame.txt`), so both programs keep the same totals: every play is counted when MAME exits (times played, last played, total playtime), shown in the Played / Last Played / Playtime columns and Game Details. The Last Played tool bar button opens the Top 25 window (Select Game, Select Game and Exit); the games list menu's Reset Selected Games Info clears the playtime, the date, the count or the whole line; Preferences can hide the seconds (`src/core/PlayedGames.cpp`, `src/app/LastPlayedDialog.cpp`).
 - Game documents (F3, or Show MAME Game Documents in the games list menu): mameinfo.dat / messinfo.dat, history.xml (or history.dat), story.dat, scores3.htm (or marp.dat) and gameinit.dat from ui.ini's historypath, in the order and display mode of Preferences (single panel above / below / beside the pictures with a splitter, or Images / Docs tabs), with the right-click menu (font, position, Go To, Disable) and the colors of Preferences page 2. Settings in `el_extras.ini` and `lightmode.ini`, as in the original (`src/core/GameDocs.cpp`, `src/app/MainWindowDocs.cpp`).
 - Image tools: Rename / Delete Image (image menu; deleted files go to the Recycle Bin), Show Layout Dimensions, Category Settings (folders per system written to MAME's `ui.ini` / `mame.ini` or `sysimagefolders_arcade.ini`, categories shown or hidden, background colors, in `image_category.ini`), Delete Images of Clone Games (with Rename to Parent) and the MAME Images Manager (missing images, images of missing games, invalid images, Scan All Categories; rename, move, delete, also inside zip files: changes written to a new zip that replaces the old one once checked), settings in `el_extras.ini` as the original (`src/core/ImageFinder.cpp`, `src/app/ImageDeleteRenameDialog.cpp`, `ImagesDeleteClonesDialog.cpp`, `CategorySettingsDialog.cpp`, `ImagesManagerDialog.cpp`, `src/core/ImageIndex.cpp`, `ZipArchive.cpp`).
-- Video previews: the selected game's video played with your media player (Shift+V, the image tool bar button, the games list menu, or AutoPlay), found in the folder of Video Preview Settings, `videosnaps` folders or the snapshot folders, with the parent's video and the dummy video that stops playback, in `ini_files\videopreview.ini` (`src/core/VideoPreview.cpp`, `src/app/VideoPreviewSettingsDialog.cpp`).
+- Video previews: the selected game's video played in the picture panel by the built-in player (`src/app/VideoPanel.cpp`, libmpv), or by your own media player if set (Shift+V, the image tool bar button, the games list menu, or AutoPlay), found in the folder of Video Preview Settings, `videosnaps` folders or the snapshot folders, with the parent's video and the dummy video that stops playback, in `ini_files\videopreview.ini` (`src/core/VideoPreview.cpp`, `src/app/VideoPreviewSettingsDialog.cpp`).
 - Help menu: web links, the original's readme/FAQ/quick setup guide and this port's user guide.
 - Find a Setting (Menu Options, Ctrl+Shift+F; also a box in Preferences): searches Preferences, MAME Settings and the menus by name, tooltip and description, and "Take me there" opens the page with the setting highlighted, or the menu with the item selected. The entries are collected from the windows' controls and the menus at run time (`src/app/SettingsSearch.cpp`), so new options are found without a list to keep up.
 - Languages: every text can be translated (`lang\<code>.ini`, chosen on first start or in Preferences > General); a French example and British English (`en_GB.ini`) are included. See **Languages** below.
 - Favorites use the original's `favorites\favorites.txt` (or the `[Preferences] FavoriteFile` profile), so both programs share them. The Favorites Manager (Favorites button menu > More...) lists the profiles: New, Clear Games, Cleanse, Replicate, Delete, edit title (F2) or file name (F3), set active (`src/core/Favorites.cpp`, `src/app/FavoritesManagerDialog.cpp`). Last selected game, filters and window size are remembered.
 - The splash screen (TFormStatus): at startup and for long jobs (creating the games list, scanning files), with the original's artwork, texts, timer, count and progress bar color schemes, and Customize Splash Screen (`ini_files\splash.ini` [Splash], the original's keys). New: startup effects (vector grid, marquee light-up, card flip, starfield warp, high scores, signal glitch, or Random) with an optional blinking INSERT COIN, drawn with Qt while the games list is read on a second thread (`src/app/SplashView.cpp`, `SplashEffects.cpp`, `SplashScreen.cpp`, `SplashCustomizeDialog.cpp`). The arcade lettering is Press Start 2P (SIL Open Font License, `resources/fonts/`), built into the program.
-- Update check (`src/core/UpdateCheck.cpp`, `src/app/UpdateFetch.cpp`, `src/app/MainWindowUpdates.cpp`): Help > Check for Updates, and once a week a few seconds after the start (Settings > General > Check for Updates Once a Week, `[EmuLoaderRL] CheckForUpdates`, `LastUpdateCheck`, `SkipUpdateVersion`), asks GitHub for the latest release of mc68k/EmuLoader-ReLoaded-Release and offers its page when it's newer (View Release, Skip This Version, Remind Me Later, Turn Off); nothing is downloaded. WinHTTP on Windows (no Qt Network to ship), Qt Network elsewhere; `EMULOADER_UPDATE_URL` points it at a file.
+- Update check (`src/core/UpdateCheck.cpp`, `src/app/UpdateFetch.cpp`, `src/app/MainWindowUpdates.cpp`): Help > Check for Updates, and once a week a few seconds after the start (Settings > General > Check for Updates Once a Week, `[EmuLoaderRL] CheckForUpdates`, `LastUpdateCheck`, `SkipUpdateVersion`), asks GitHub for the latest release of mc68k/EmuLoader-ReLoaded-Release and, when it's newer, shows its notes and offers Install Update, Download It Myself (the release's page), Skip This Version, Remind Me Later and Turn Off. Install Update (`src/app/UpdateDownload.cpp`, `src/core/UpdateInstall.cpp`) downloads the release's `*-windows.zip` asset with a progress window, checks its size and SHA-256 (GitHub's `digest`), unpacks it into `update-download`, moves each file it replaces into `previous-version` (a running program's files can be moved on Windows, not deleted; everything is put back if a file can't be placed), then starts the new version with `--after-update` (it waits up to 30 seconds for the lock the old one holds) and closes. Only the zip's files are touched, so the data folders stay as they are. WinHTTP on Windows (no Qt Network to ship), Qt Network elsewhere; `EMULOADER_UPDATE_URL` points it at a file.
 - Arcade ROMs Folders (each system's `rompath`), Arcade Files Versions (the emulator's version and the games list's, in red when they differ) and Export MAME and Arcade Games List (Full Format, also as Excel CSV; Short Format `gamename=system`; MAME Content Manager Plus; all, visible or selected games; `el_extras.ini` [ExportArcadeGames]) (`src/app/RomsFoldersDialog.cpp`, `FileVersionsDialog.cpp`, `ExportGamesDialog.cpp`).
 - Scan MAME/HBMAME Missing Audio Samples (the samples sets from `-listxml` kept in `arcade\games\mame.elsamples`; `src/app/ScanSamplesDialog.cpp`), View Game Manual (PDF) (`manuals\<set>.pdf` in MAME's folder, `manuals_directory` in `sysimagefolders_arcade.ini`, set in Preferences), Number of Players from `nplayers.ini` (with Show Players Info From nplayers.ini Only) and Language from `languages.ini` (column, search, Game Details), the search box's Use Small Icons, Show Filter Labels in Small Tool Bar and Help, and Use Alternate Frontend Icons (`resources\main_icons\alternate`).
 - Customize Columns and the columns header font (`src/app/ColumnsEditorDialog.cpp`); the view modes: Grouped (parents with their clones under a title band), Small Icons, Large Icons, Tiles and Thumbnails (`src/app/GamesIconView.cpp`, sharing the details list's model and selection), and Thumbnail Settings (`ThumbnailSettingsDialog.cpp`, `games_filters.ini` [Thumbnails]).
-- Night Mode (`src/app/NightMode.cpp`: the night profile `nightmode\<profile>.ini`, the original's keys and defaults; the program drawn dark through the Fusion style's palette and the forms' colors turned around in `VclRuntime`) and Customize Night Mode Colors (`NightModeDialog.cpp`, with profiles).
+- Help > About (`src/app/AboutDialog.cpp`): the version and build, the setup to copy for a problem report (no folders), links, the folders and the credits.
+- Night Mode (`src/app/NightMode.cpp`: the night profile `nightmode\<profile>.ini`, the original's keys and defaults; the program drawn dark through the Fusion style's palette and the forms' colors turned around in `VclRuntime`) and Customize Night Mode Colors (`NightModeDialog.cpp`, with profiles, and Copy Color / Paste Color on a color's right-click menu).
 - MAMu_ icons (`src/app/MamuIcons.cpp`): loose `.ico` files and `icons.zip` (`src/core/ZipArchive.cpp`), the parent/clone/device/BIOS/driver options, the folder in Preferences (with the progetto-SNAPS link). The MAMu_ Icons Manager is the Images Manager's Icons category: games with and without an icon, unused and invalid icons (driver icons and `deviceset.ico` aren't), the excluded list (`arcade\el_mamu_exclude.ini`), Create / Edit Icon.
 - Smaller menu items: the Special List (`ini_files\special.txt`, with the Misc filter), Select Game at Startup (`[SelectGameStartup]`), Alternate Title Format and Game Title Extra Info, Incremental Search by title or set name, Show Tool Bar / Bound to Games Panel / Show Games Status Bar, the Restore Default and Reset Columns items, the Run Game Confirmation Dialog, Show Favorite Icon in Games, the image Resampler (Off, Linear, Cosine, Hermite; `src/app/ImageResample.cpp`) and the splitter bar's own menu.
 - Delete Selected Games Files, Copy/Move Selected Games Files to Folder: one window for one or many games, with the ROM set, CHDs and config/NVRAM files of each, checked by type; deleted files go to the Recycle Bin; CHDs are copied into a folder named after their game (`src/core/GameFiles.cpp`, `src/app/GameFilesDialog.cpp`).
-- Customize Tool Bar (`FormToolBarEditor`, `src/app/CustomizeToolBarDialog.cpp`): each button shown or not, the search box too (`[ToolBar] GamesFilters_Buttons`), Bound To Games Panel, Show Tool Bar, the icon size, All Visible; also a right-click on the tool bar.
+- Customize Tool Bar (`src/app/ToolBarCustomizer.cpp`, in Settings > Tool Bar): the buttons' order by drag and drop, presets, each button shown or not, the search box too (`[ToolBar] GamesFilters_Buttons`), Bound To Games Panel, Show Tool Bar, the icon size; also a right-click on the tool bar.
 - The search bar's Controls filter: the control types of `arcade\filters\mame_control_type.ini`; one picked shows the games with it (Include Tool Bar Filters: `[ListFilter] SearchBarControlsIncludeMainFilters`).
 - Internet Game Info (`src/core/GameInfoPage.cpp`): the images tool bar's globe and the games list menu open the game's page in the browser: by default a page made from your files (`EmuLoaderRL\gameinfo\<name>.html`: pictures, details, clones, game documents; made again each time), else the website in Preferences (ProgettoEMMA / Arcade Italia, `%s` the set and the list). The original's built-in browser panel isn't ported.
 - Preferences: Disable Clone Indent, Multiline Captions (games list and Machines List panel, `GamesListDelegate::twoLineCaption`), Disable "Delete/Copy/Move Games Files" (the three items), Left Align Emulators Info and Games (the Run Game Confirmation Dialog), Enable Diagnostic Log (`EmuLoaderRL\diagnostic.log`, `--debug-log`, 5 MB then `.1`; `src/core/DiagnosticLog.cpp`). Fix RetroArch Image File Names is hidden: it was for the original's non-MAME console games.
@@ -164,7 +160,7 @@ in it, with the Delphi version's layout (`src/core/Frontend.h`):
 
 - Main CPU filter (Misc Filters > Filter MAME Games by Main CPU): a row under the tool bar, the CPU kept in the games list (`<maincpu>`).
 
-**Left out on purpose.** The original Scan Games Mode window's Add MAME Device Sets With No ROMs (a hidden developer switch: the device sets without ROMs are never shown and aren't needed to check ROMs).
+**Left out on purpose.** The original Scan Games Mode window's Add MAME Device Sets With No ROMs (a hidden developer switch: the device sets without ROMs are never shown and aren't needed to check ROMs). AlterMAME. Browse Games With an arcade controller (Devastator II, Hot Rod SE, SlikStik, X-Arcade) and View Arcade Controllers Layout: such controllers are set up as a keyboard; Keyboard + Mouse is the only choice.
 
 Consoles and computers run by emulators other than MAME, and the other arcade
 emulators (Demul, Supermodel, Model 2, ZiNc, Daphne, DICE), are out of scope.
@@ -265,7 +261,11 @@ Open Font License), and, for the built-in video player, libmpv and FFmpeg (an LG
 | `tools/formview.cpp` | renders a converted form to PNG |
 | `tools/settingsview.cpp` | opens the Emulator Settings window on a data folder, for testing |
 | `tools/make_language_template.py` | writes `lang/English.ini`; with a file argument, adds new texts to a translation |
+| `tools/make_british.py` | writes `lang/en_GB.ini` (English (UK)) from `lang/English.ini` |
 | `tools/langcheck.cpp` | lists translated texts that don't fit their windows (`--grab` saves pictures); shipped as `langcheck.exe` |
-| `tools/package-windows.sh` | cross-builds the Windows version and makes `dist/EmuLoader-ReLoaded-1.0.0-windows.zip` |
+| `tools/mingw-toolchain.cmake` | the CMake toolchain file for the Windows cross-build |
+| `tools/build-libmpv-lgpl.sh` | builds the LGPL `mpv-2.dll` the Windows version ships, from the sources listed in `third_party/mpv/README.md` |
+| `tools/crash-lookup.sh` | turns a `crash.log` into source file names and line numbers (`tools/crash-lookup.sh crash.log [program folder]`) |
+| `tools/package-windows.sh` | cross-builds the Windows version and makes `dist/EmuLoader-ReLoaded-1.1.1-windows.zip` |
 
 A community continuation of EmuLoader, originally created by Ciro Alfredo Consentino (1974–2021). Ported from his Emuloader v8.9.4.

@@ -46,6 +46,13 @@ th { background: var(--panel); font-weight: 600; }
 .note { background: var(--panel); border-left: 4px solid var(--accent); padding: 10px 14px; margin: 14px 0; }
 .tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 0 6px; border-radius: 3px;
        border: 1px solid currentColor; margin-left: 4px; vertical-align: 1px; }
+.num { display: inline-block; min-width: 20px; height: 20px; line-height: 20px; border-radius: 10px; background: #1971c2; color: #fff; font-weight: bold; font-size: 12px; text-align: center; }
+ol.key { list-style: none; padding-left: 0; margin: -6px 0 16px; }
+ol.key li { margin: 3px 0; }
+ol.key .num { margin-right: 6px; }
+figure { margin: 14px 0 18px; }
+figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+figcaption { color: var(--muted); font-size: 14px; margin-top: 4px; }
 .tag.new { color: var(--new); } .tag.diff { color: var(--diff); }
 @media (max-width: 820px) {
   .wrap { display: block; }
@@ -100,13 +107,13 @@ th { background: var(--panel); font-weight: 600; }
   <a class="part" href="#part-reference">Reference</a>
   <a class="sub" href="#files">Files</a>
   <a class="sub" href="#differences">Differences from the original</a>
-  <a class="sub" href="#notyet">Not ported yet</a>
+  <a class="sub" href="#notyet">Left out on purpose</a>
   <a class="sub" href="#updates">Checking for updates</a>
   <a class="sub" href="#trouble">Troubleshooting</a>
 </nav>
 <main>
 
-<h1>EmuLoader ReLoaded 1.0.0</h1>
+<h1>EmuLoader ReLoaded 1.1.1</h1>
 <p class="build">Build: dev</p>
 <p>User guide for EmuLoader ReLoaded, the C++/Qt continuation of EmuLoader, for MAME and HBMAME.</p>
 
@@ -114,6 +121,7 @@ th { background: var(--panel); font-weight: 600; }
 
 <h2 id="about">About this version</h2>
 <p><i>A community continuation of EmuLoader, originally created by Ciro Alfredo Consentino (1974&ndash;2021). Ported from his Emuloader v8.9.4.</i></p>
+<figure><a href="guide-images/about.png"><img src="guide-images/about.png" alt="The About window." loading="lazy"></a><figcaption>The About window.</figcaption></figure>
 <p>EmuLoader ReLoaded is written in C++ and Qt 6. It looks and works like the original. It is limited to the MAME family; the other arcade emulators the
 original supports (Demul, Supermodel, Model 2, ZiNc, Daphne, DICE) are left out.</p>
 <p><span class="tag diff">Different</span> Put it in an existing EmuLoader folder (or point it at one). It keeps its
@@ -132,15 +140,14 @@ shared and changed, but not sold or used for commercial purposes. The full terms
 <p>In this guide, <span class="tag new">New</span> marks something the original doesn't have and
 <span class="tag diff">Different</span> marks something that works differently. Every difference is also
 listed in <a href="#differences">Differences from the original</a>.</p>
-<div class="note">This is a work in progress. Any window, button or menu item that isn't ported yet is grayed out.
-Hold the mouse over it to see the tooltip "Not ported to the C++ version yet". The full list is under
-<a href="#notyet">Not ported yet</a>.</div>
+<div class="note">Everything of the original is ported, except a few features left out on purpose, listed under
+<a href="#notyet">Left out on purpose</a>.</div>
 
 <h2 id="start">Getting started</h2>
 <h3>Using your existing EmuLoader folder</h3>
 <ol>
   <li>Make a backup copy of your EmuLoader folder.</li>
-  <li>Unzip <code>EmuLoader-ReLoaded-1.0.0-windows.zip</code>. Then either:
+  <li>Unzip <code>EmuLoader-ReLoaded-1.1.1-windows.zip</code>. Then either:
     <ul>
       <li>copy the <em>contents</em> of its <code>EmuLoader-ReLoaded</code> folder into your EmuLoader folder
       (nothing of the original is overwritten; the program is <code>EmuLoader-ReLoaded.exe</code>), or</li>
@@ -168,19 +175,20 @@ parent's has no file of its own, as MAME expects; it counts as available when it
 games list made by this version (a list made before doesn't know which clones those are: recreate it).</p>
 
 <h2 id="window">The main window</h2>
+<figure><a href="guide-images/main-window.png"><img src="guide-images/main-window.png" alt="The main window with Ms. Pac-Man selected." loading="lazy"></a><figcaption>The main window with Ms. Pac-Man selected.</figcaption></figure>
 <div class="tablewrap"><table>
-<tr><th>Area</th><th>What it does</th></tr>
-<tr><td>Orb (top left)</td><td>Menu Options: Find a Setting, Settings, MAME/Arcade setup, Games List, Images and Help.
+<tr><th></th><th>Area</th><th>What it does</th></tr>
+<tr><td><span class="num">1</span></td><td>Orb (top left)</td><td>Menu Options: Find a Setting, Settings, MAME/Arcade setup, Games List, Images and Help.
   See <a href="#find">Find a Setting</a>.</td></tr>
-<tr><td>Tool bar</td><td>Filters (Games Filters, Have/Miss, Parent/Clone, Driver Status, Favorites, Misc, Machines) and
-  MAME's settings. A button's picture and caption change to show the filter that's active.
+<tr><td><span class="num">2</span></td><td>Tool bar</td><td>Filters (Games Filters, Have/Miss, Parent/Clone, Driver Status, Favorites, Misc, Machines),
+  MAME's settings and the selected game's custom parameters. A button's picture and caption change to show the filter that's active.
   See <a href="#toolbar">The tool bar</a>.</td></tr>
-<tr><td>Search box (top right)</td><td>Finds games as you type. See <a href="#search">Search and filters</a>.</td></tr>
-<tr><td>Games list</td><td>The games, with columns you can sort and resize. See <a href="#list">Games list</a>.</td></tr>
-<tr><td>Image panel (right)</td><td>Snapshots, titles, flyers, marquees and more for the selected game.
+<tr><td><span class="num">3</span></td><td>Search box (top right)</td><td>Finds games as you type. See <a href="#search">Search and filters</a>.</td></tr>
+<tr><td><span class="num">4</span></td><td>Games list</td><td>The games, with columns you can sort and resize. See <a href="#list">Games list</a>.</td></tr>
+<tr><td><span class="num">5</span></td><td>Image panel (right)</td><td>Snapshots, titles, flyers, marquees and more for the selected game.
   See <a href="#images">Image panel</a>.</td></tr>
-<tr><td>Splitter</td><td>Drag the bar between the list and the images to resize them.</td></tr>
-<tr><td>Status bar</td><td>Number of games listed and the selected game's short name.</td></tr>
+<tr><td><span class="num">6</span></td><td>Splitter</td><td>Drag the bar between the list and the images to resize them.</td></tr>
+<tr><td><span class="num">7</span></td><td>Status bar</td><td>Number of games listed and the selected game's short name.</td></tr>
 </table></div>
 <p>The window's size and position, the splitter, the column layout, the filters and the last selected game
 are restored the next time you start EmuLoader.</p>
@@ -209,6 +217,7 @@ one (<code>resources\main_icons\alternate</code>): the MAME and HBMAME icons, th
 <h1 class="part" id="part-list">Finding and managing games</h1>
 
 <h2 id="list">Games list</h2>
+<figure><a href="guide-images/games-list-menu.png"><img src="guide-images/games-list-menu.png" alt="The games list right-click menu." loading="lazy"></a><figcaption>The games list right-click menu.</figcaption></figure>
 <h3>Icons and columns</h3>
 <ul>
   <li><b>Icons.</b> Each game has an icon for parent, clone, BIOS or device. It's in color when the ROMs
@@ -223,6 +232,8 @@ one (<code>resources\main_icons\alternate</code>): the MAME and HBMAME icons, th
   font (<code>lightmode.ini</code> [GamesListHeader]); Default Header Font goes back to Segoe UI 9.</li>
 </ul>
 <h3>Views</h3>
+<figure><a href="guide-images/view-grouped.png"><img src="guide-images/view-grouped.png" alt="Grouped view: clones under their parent." loading="lazy"></a><figcaption>Grouped view: clones under their parent.</figcaption></figure>
+<figure><a href="guide-images/view-thumbnails.png"><img src="guide-images/view-thumbnails.png" alt="Thumbnails view." loading="lazy"></a><figcaption>Thumbnails view.</figcaption></figure>
 <ul>
   <li><b>View modes.</b> The View button of the tool bar shows the games as <b>Details</b> (the columns),
   <b>Grouped</b> (the columns, each parent with its clones under its title; the groups are in title order, so the
@@ -299,6 +310,7 @@ filters still apply. A text search, or the Reset button, replaces it.</p>
 <p><span class="tag diff">Different</span> Each button shows its caption as text under the picture, in the
 language you've chosen. (The original draws an English caption into the picture itself.) A button is as wide as
 its caption; a long caption takes two lines.</p>
+<figure><a href="guide-images/settings-toolbar.png"><img src="guide-images/settings-toolbar.png" alt="Settings &gt; Tool Bar, where the buttons are arranged." loading="lazy"></a><figcaption>Settings &gt; Tool Bar, where the buttons are arranged.</figcaption></figure>
 <ul>
   <li>The orb has the caption "Menu" (the original has none there).</li>
   <li><b>Icon size</b>: Menu Options &gt; Games List &gt; Tool Bar Buttons &gt; Icon Size: Extra Large (68&times;68),
@@ -319,6 +331,9 @@ its caption; a long caption takes two lines.</p>
   <code>EmuLoaderRL\toolbar_presets.ini</code>). The order is saved as <code>[EmuLoaderRL] ToolBarOrder</code>;
   <code>[ToolBar] GamesFilters_Buttons</code> is kept up to date for the original.</li>
   <li>The same tab has Show Tool Bar, Bound to Games Panel, Show the Search Games Box and the icon size.</li>
+  <li><span class="tag diff">Different</span> The <b>Parameters</b> button opens the selected game's custom parameters
+  (see <a href="#params">Custom parameters</a>). The original's buttons for other emulators, Load Game Using
+  Metadata File (.cue) and Select Default Emulators, aren't shown.</li>
   <li><span class="tag new">New</span> The <b>Guide</b> button opens this guide. <kbd>F1</kbd> opens it from any of EmuLoader's windows, at
   that window's section (in Settings, the section of the tab you're on);
   right-click it for What's Different, Getting Started, Keyboard and Mouse, and Troubleshooting.</li>
@@ -395,6 +410,7 @@ game) copies the blank icon to <code>&lt;game&gt;.ico</code> and opens it in the
 <p>Right-click the <b>Favorites</b> tool bar button &gt; <b>More...</b> opens the Favorites Manager: your favorites
 lists, one file each in the <code>favorites</code> folder, with their title, number of games, file name and
 date. The list in use has a star. (The original calls them profiles.)</p>
+<figure><a href="guide-images/favorites-manager.png"><img src="guide-images/favorites-manager.png" alt="The Favorites Manager." loading="lazy"></a><figcaption>The Favorites Manager.</figcaption></figure>
 <ul>
   <li><b>New</b> makes an empty list; <b>Replicate</b> copies the selected one.</li>
   <li><b>Clear Games</b> takes every game off the selected list.</li>
@@ -412,6 +428,14 @@ date. The list in use has a star. (The original calls them profiles.)</p>
 <p>The window's size and columns are kept in <code>el_extras.ini [FavoritesManager]</code>, as in the original.</p>
 
 <h2 id="details">Game Details</h2>
+<figure><a href="guide-images/game-details.png"><img src="guide-images/game-details.png" alt="Game Details, after a quick scan of the game's files." loading="lazy"></a><figcaption>Game Details, after a quick scan of the game's files.</figcaption></figure>
+<ol class="key">
+  <li><span class="num">1</span> The game's title, its set name and the MAME version.</li>
+  <li><span class="num">2</span> The scan mode.</li>
+  <li><span class="num">3</span> The game's information.</li>
+  <li><span class="num">4</span> Game Files: the sets and CHDs the game needs.</li>
+  <li><span class="num">5</span> Every ROM and disk of the set, with its status.</li>
+</ol>
 <p>Right-click a game and choose <b>Game Details</b>. The top shows the game's title, its set name (with its
 parent and BIOS), the MAME version and the scan mode, colored by whether the set is complete. On the left:</p>
 <ul>
@@ -491,6 +515,7 @@ The boxes under the list check or uncheck one kind of file for every game.</p>
 <p>Which sets you have is worked out when the games list is made, by looking for each set's file in your ROM folders
 (a quick scan). To check them more closely, right-click the games list &gt; <b>Scan Games (Audit ROMs)...</b>. The
 window asks:</p>
+<figure><a href="guide-images/scan-games.png"><img src="guide-images/scan-games.png" alt="Scan Games." loading="lazy"></a><figcaption>Scan Games.</figcaption></figure>
 <ul>
   <li><b>Which Games</b>: All Games, Available Games, Missing Games, Incomplete Games (Missing ROMs/CHDs) or Selected
   Games, each with how many there are. With several games selected, Selected Games is chosen.</li>
@@ -653,6 +678,7 @@ window. The original hid MAME completely, which broke windowed mode.</p>
 <p>Right-click a game and choose <b>Run Game (Extra)</b> to pick what MAME should do besides running the game.
 The window has four pages; tick <b>Enabled</b> on the ones you want, then click <b>OK</b> to start the game
 (<b>Cancel</b> runs nothing).</p>
+<figure><a href="guide-images/run-game-extra.png"><img src="guide-images/run-game-extra.png" alt="Run Game (Extra), with playback of an input file turned on." loading="lazy"></a><figcaption>Run Game (Extra), with playback of an input file turned on.</figcaption></figure>
 <ul>
   <li><b>Playback/Record an Input File</b>: <i>Playback</i> replays a recording of the controls you pick in the
   list; <i>Record</i> records one, under the name in the box (<b>Reset</b> puts the game's name there,
@@ -681,12 +707,21 @@ the games list (as the original). With a games list made by an older version, cr
 The last cards used are kept in <code>arcade\memcard_lastused\mame\</code>.</p>
 
 <h2 id="params">Custom parameters</h2>
-<p>Right-click a game &gt; <b>Custom Parameters</b> &gt; <b>Set Game Parameters [name]</b> to give MAME extra
-command line options for that game every time it runs, for example <code>-cheat -nothrottle</code>. They go after
+<p>Right-click a game &gt; <b>Custom Parameters</b> &gt; <b>Set Game Parameters [name]</b>, or click the tool
+bar's <b>Parameters</b> button, to give MAME extra command line options for the selected game every time it runs, for example <code>-cheat -nothrottle</code>. They go after
 the game's name. A <code>&lt;game&gt;</code> tag in them is replaced by the game's name, which then isn't put
 first. For a clone, <b>Set Parent Game Parameters</b> sets them for its parent; a clone without parameters of its
 own uses its parent's. <b>Delete ... Parameters</b> appears when there are parameters, and deletes them.
 Custom parameters are for MAME (not HBMAME), as in the original.</p>
+<figure><a href="guide-images/custom-parameters.png"><img src="guide-images/custom-parameters.png" alt="Custom parameters for one game, with the machine slots and media panel open." loading="lazy"></a><figcaption>Custom parameters for one game, with the machine slots and media panel open.</figcaption></figure>
+<ol class="key">
+  <li><span class="num">1</span> The game's parameters.</li>
+  <li><span class="num">2</span> Examples.</li>
+  <li><span class="num">3</span> Machine Slots / Media Info, for the machine.</li>
+  <li><span class="num">4</span> Slots or Media, and Edit Command: other list options, run with Run Command.</li>
+  <li><span class="num">5</span> The arrow hides or shows the panel.</li>
+  <li><span class="num">6</span> What MAME says.</li>
+</ol>
 <p>The window shows examples, and on the right <b>Machine Slots / Media Info</b>: what MAME says about the
 machine's slots (<code>-listslots</code>) or media (<code>-listmedia</code>). <b>Edit Command</b> runs MAME with
 other list options. The arrow button hides or shows this panel. Parameters are kept in
@@ -971,6 +1006,7 @@ go to the Recycle Bin.</p>
 no sound device, a video plays without sound. The included <code>mpv-2.dll</code> is built from mpv's and FFmpeg's
 own source code under the LGPL (<code>licenses\Video-player-mpv-and-FFmpeg.md</code> lists every part and where its
 source is), and it can be replaced with another build of the mpv library.</p>
+<figure><a href="guide-images/settings-video.png"><img src="guide-images/settings-video.png" alt="Settings &gt; Video." loading="lazy"></a><figcaption>Settings &gt; Video.</figcaption></figure>
 <h3>Advanced: another media player</h3>
 <p>If you'd rather use a media player of your own (MPC-HC, VLC...), open <b>Advanced: Use Another Media Player</b>
 and check <b>Play the videos in this media player instead</b>. That player opens the videos in its own window: they
@@ -996,6 +1032,7 @@ so the original shows the snapshot there.</p>
 <p>The history, MAME information and other texts of the selected game, from the DAT files many MAME users
 already have. Turn them on with <b>Show MAME Game Documents</b> in the games list's right-click menu, or
 press <kbd>F3</kbd>.</p>
+<figure><a href="guide-images/game-documents.png"><img src="guide-images/game-documents.png" alt="Game documents shown beside the picture." loading="lazy"></a><figcaption>Game documents shown beside the picture.</figcaption></figure>
 <div class="tablewrap"><table>
 <tr><th>Document</th><th>File</th></tr>
 <tr><td>Information Data</td><td><code>mameinfo.dat</code>, else <code>messinfo.dat</code> (the game, or its parent)</td></tr>
@@ -1060,6 +1097,8 @@ the tabs and press <kbd>Enter</kbd> (see <a href="#find">Find a Setting</a>). Th
 Splash Screen). Each tab has a line at the top saying
 what it covers, and the settings are in framed groups with a sentence under each one saying what it does; the
 window is as wide as its widest tab.</p>
+<figure><a href="guide-images/menu-options.png"><img src="guide-images/menu-options.png" alt="Menu Options, opened from the orb." loading="lazy"></a><figcaption>Menu Options, opened from the orb.</figcaption></figure>
+<figure><a href="guide-images/settings.png"><img src="guide-images/settings.png" alt="The Settings window." loading="lazy"></a><figcaption>The Settings window.</figcaption></figure>
 <div class="tablewrap"><table>
 <tr><th>Tab</th><th>What's there</th><th>The original's window</th></tr>
 <tr><td>General</td><td>Startup, language, running games, Hide MAME's Command Prompt Window, Protect Game Files, the diagnostic log</td><td>Preferences, page 1</td></tr>
@@ -1071,7 +1110,7 @@ window is as wide as its widest tab.</p>
 <tr><td>Video</td><td>Video previews</td><td>Video Preview Settings</td></tr>
 <tr><td>Game Info and Documents</td><td>The game documents' display mode and order, where to get their files, the game manuals folder, Internet Game Info</td><td>Preferences, page 1</td></tr>
 <tr><td>Tool Bar</td><td>The tool bar's buttons and their order, presets (changes show at once)</td><td>Customize Tool Bar</td></tr>
-<tr><td>Colors</td><td>The Light Mode colors</td><td>Preferences, page 2</td></tr>
+<tr><td>Colors</td><td>The Light Mode colors (also Menu Options &gt; Games List &gt; Games List Appearance)</td><td>Preferences, page 2</td></tr>
 <tr><td>Night Mode</td><td>The Night Mode colors and profiles</td><td>Customize Night Mode Colors</td></tr>
 <tr><td>Splash Screen</td><td>The splash screen</td><td>Customize Splash Screen</td></tr>
 </table></div>
@@ -1126,6 +1165,7 @@ other tabs have sections of their own: <a href="#emusetup">Emulators</a>, <a hre
 when the list doesn't have the focus), status bar, list background (color or picture, tiled or not),
 splitters (17 styles), image border, image hint box and game documents. Changes show in the main window immediately.
 They're saved in <code>ini_files\lightmode.ini</code> when the window closes.</p>
+<figure><a href="guide-images/settings-colors.png"><img src="guide-images/settings-colors.png" alt="Settings &gt; Colors." loading="lazy"></a><figcaption>Settings &gt; Colors.</figcaption></figure>
 
 <h2 id="find">Find a Setting</h2>
 <p><span class="tag new">New</span> Menu Options &gt; Find a Setting, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
@@ -1133,6 +1173,7 @@ Type part of a setting's name, such as <i>minimize</i>, <i>snapshot</i> or <i>bi
 match in Settings, MAME Settings and the menus, with where it is
 (for example <i>Settings › General</i>). Choose one and click <b>Take me there</b>, double-click it,
 or press <kbd>Enter</kbd>:</p>
+<figure><a href="guide-images/find-a-setting.png"><img src="guide-images/find-a-setting.png" alt="Find a Setting, searching for &ldquo;video&rdquo;." loading="lazy"></a><figcaption>Find a Setting, searching for &ldquo;video&rdquo;.</figcaption></figure>
 <ul>
   <li>for a window setting, the window opens at the right page (and sub page) and the setting flashes with a red
   frame;</li>
@@ -1146,8 +1187,8 @@ letters (<i>reduire</i> finds <i>Ne pas réduire</i>), and works in the language
 so <i>icon size</i> finds the Icon Size menu and the sizes in it, and <i>video 3</i> the settings on that page
 (the window or menu name itself, such as <i>Settings</i> or <i>Menu</i>, isn't searched, as it would list
 everything in it).
-Names come first, then the matches found in tooltips, then the ones found by where they are. Grayed-out settings are listed last: they're not ported yet, or not
-available in your MAME version. MAME Settings are searched only once MAME is set up; "Take me there" opens the
+Names come first, then the matches found in tooltips, then the ones found by where they are. Grayed-out settings are listed last: they're not available now, or
+not in your MAME version. MAME Settings are searched only once MAME is set up; "Take me there" opens the
 default settings (<code>mame.ini</code>).</p>
 <p>The Settings window has the same search box at the right of its tabs.</p>
 
@@ -1207,6 +1248,7 @@ window, which edits <code>mame.ini</code>. To jump to one option without looking
 including per-screen settings, the BIOS list, languages, LUA plugins (<code>plugin.ini</code>), controller
 definitions, BGFX shader chains and <code>ui.ini</code>'s <code>skip_warnings</code>. Options that your
 MAME version doesn't have stay grayed out, so the window follows the MAME you use.</p>
+<figure><a href="guide-images/mame-settings.png"><img src="guide-images/mame-settings.png" alt="MAME's default settings (mame.ini)." loading="lazy"></a><figcaption>MAME's default settings (mame.ini).</figcaption></figure>
 <p>EmuLoader never adds options that are missing from your <code>mame.ini</code>, since an older MAME would
 reject them. It also never removes options it doesn't know. When nothing has changed, the file is left
 exactly as it was.</p>
@@ -1229,12 +1271,16 @@ tool bar, the games list (with its own background picture, <code>bkgrd_dark.png<
 titles, status bar and splitters, the image hint box and the game documents. The games' fonts come from
 <code>ini_files\sysgamecustomfont_nightmode.ini</code> (white, silver for preliminary sets, light red for missing
 ROMs, until you customize them in Night Mode). It's remembered ([Preferences] NightModeEnabled).</p>
+<figure><a href="guide-images/night-mode.png"><img src="guide-images/night-mode.png" alt="The main window in Night Mode." loading="lazy"></a><figcaption>The main window in Night Mode.</figcaption></figure>
+<figure><a href="guide-images/settings-night-mode.png"><img src="guide-images/settings-night-mode.png" alt="Settings &gt; Night Mode." loading="lazy"></a><figcaption>Settings &gt; Night Mode.</figcaption></figure>
 <p>Menu Options &gt; <b>Customize Night Mode Colors</b> sets every one of those colors. The program shows each change
 at once while Night Mode is on; <b>Save</b> keeps them in the profile, <code>nightmode\&lt;profile&gt;.ini</code>
 ([Preferences] NightModeProfile, Default at first). OK in Settings saves them too, and Cancel puts the profile's
 saved colors back. A box's
 <b>Default</b> puts its colors back as they were at first; <b>Default All</b> does it for all of them. <b>New</b>
 makes another profile with the colors shown, <b>Delete</b> removes one, <b>Reload</b> reads the file again.
+Right-click a color &gt; <b>Copy Color</b>, then right-click another &gt; <b>Paste Color</b> to give it the same
+color. The color goes to the clipboard as <code>#rrggbb</code>, so one copied from elsewhere can be pasted too.
 <span class="tag diff">Different</span> The
 original's previews, its "blue" defaults, the tool bar overlay icons and the check box pictures aren't ported; the
 program itself shows the colors.</p>
@@ -1248,6 +1294,7 @@ there.</p>
 <h3>Customize Splash Screen</h3>
 <p><b>Customize Splash Screen</b> (Menu Options) shows the splash screen with sample texts, and its settings
 beside it:</p>
+<figure><a href="guide-images/settings-splash.png"><img src="guide-images/settings-splash.png" alt="Settings &gt; Splash Screen." loading="lazy"></a><figcaption>Settings &gt; Splash Screen.</figcaption></figure>
 <ul>
   <li><b>Logo Image Settings</b>: Alternate Logo (<code>logo2.png</code>, the "Night Mode Edition" artwork),
   Alternate Text Layout (the title beside the timer, the progress bar above it), and Ultra Size, which makes
@@ -1405,7 +1452,10 @@ where the English does, or when it's wider than an English text that already doe
 <tr><th>Feature</th><th>This version</th></tr>
 <tr><td>Files</td><td>This version keeps its own files in <code>EmuLoaderRL\</code> and doesn't write to the original's. The first start copies your data from the original and makes the games list again from MAME.</td></tr>
 <tr><td>Emulators</td><td>MAME and HBMAME only. Consoles and computers are off unless you turn them on in Settings.</td></tr>
-<tr><td>Emulators Setup</td><td>A MAME build is named "UME" only when its file name says so (the original looked at the whole path).</td></tr>
+<tr><td>Emulators Setup</td><td>MAME is called UME only when the program's own name says so, for example <code>ume64.exe</code>. The original also called it UME when a folder name contained those letters, such as <code>Documents</code>.</td></tr>
+<tr><td>Other emulators for consoles and computers</td><td>Removed: consoles and computers run through MAME's software lists. The Console/Computer/Handheld menu (Emulators Setup, Games Folders Settings, Systems Editor, Games Editor, Create Games List), Run Game (Console/Computer Emulator), and the tool bar's Load Game Using Metadata File (.cue) and Select Default Emulators buttons are gone. Their settings are kept for the original.</td></tr>
+<tr><td>Parameters tool bar button</td><td>The original's Emulator Parameters To Use chose the parameters of another emulator; here it opens the selected game's custom parameters, as Set Game Parameters does.</td></tr>
+<tr><td>Browse Games With</td><td>Keyboard + Mouse only. The modes for arcade controllers (Devastator II, Hot Rod SE, SlikStik, X-Arcade, Swap 2nd Player Up/Down) and View Arcade Controllers Layout are removed: set such a controller up as a keyboard.</td></tr>
 <tr><td>AlterMAME</td><td>Removed: an older MAME build's ROM sets no longer match today's games list. The Run Game With AlterMAME and Auto Run Game With AlterMAME menu items are gone too.</td></tr>
 <tr><td>MAME's errors</td><td>A window explains why the game stopped and shows MAME's own message (the missing ROM files, ...), instead of only the exit code.</td></tr>
 <tr><td>Hide Command Prompt Box &gt; Run Game</td><td>Hides MAME's console window only; the game window always shows.</td></tr>
@@ -1450,17 +1500,23 @@ where the English does, or when it's wider than an English text that already doe
 <tr><td>Splash screen</td><td>Long jobs have a Cancel button (or <kbd>Esc</kbd>). The version is at the top right by default, a little larger, clear of both pictures' artwork.</td></tr>
 <tr><td>Language</td><td>Every text can be translated with a language file (<code>lang\*.ini</code>). The original is English only.</td></tr>
 <tr><td>Help menu</td><td>Has "EmuLoader ReLoaded User Guide" (this page, also <kbd>F1</kbd>) and "Check for Updates" (see <a href="#updates">Checking for updates</a>).</td></tr>
+<tr><td>About</td><td>Shows the version and build, your setup (Windows, Qt and MAME versions) with Copy Version Info for a problem report, the data and settings folders, links (GitHub Page, Report a Problem, User Guide, Check for Updates) and the credits, with Licenses... for the licenses folder.</td></tr>
 </table></div>
 <h3>Everything else</h3>
 <div class="tablewrap"><table>
 <tr><th>Feature</th><th>This version</th></tr>
 <tr><td>Other systems</td><td>Runs on Linux and macOS too. There, Windows' title sort is reproduced so the list order is the same.</td></tr>
-<tr><td>Unported features</td><td>Grayed out, with a "Not ported to the C++ version yet" tooltip. Their saved settings are kept as they are.</td></tr>
 </table></div>
 
-<h2 id="notyet">Not ported yet</h2>
-<p>Everything of the original is ported, except what was left out on purpose:</p>
+<h2 id="notyet">Left out on purpose</h2>
+<p>These features of the original aren't in this version. Their saved settings are kept as they are, for the
+original:</p>
 <ul>
+  <li><b>Other emulators for consoles and computers</b>: they run through MAME's software lists (see
+  <a href="#differences">Differences from the original</a>).</li>
+  <li><b>AlterMAME</b>: an older MAME build's ROM sets no longer match today's games list.</li>
+  <li><b>Browse Games With</b> an arcade controller (Devastator II, Hot Rod SE, SlikStik, X-Arcade) and View Arcade
+  Controllers Layout: set such a controller up as a keyboard. Keyboard + Mouse is the only choice.</li>
   <li><b>Add MAME Device Sets With No ROMs</b> (the original's Scan Games Mode and Select System windows; its menu
   item was hidden, marked "DO NOT REMOVE!!!"): it also wrote MAME's device sets without ROMs (sound chips, CPUs and
   other parts machines are built from) into the games list file. They're never shown and aren't needed to check
@@ -1471,14 +1527,27 @@ where the English does, or when it's wider than an English text that already doe
 <p><span class="tag new">New</span> Once a week, a few seconds after it starts, EmuLoader asks GitHub whether a newer version
 has been released, and says so when there is one. <b>Help &gt; Check for Updates...</b> asks at any time, and also
 says when you have the latest version or why it couldn't ask. Only the version number is asked for: nothing about
-you or your games is sent. EmuLoader never downloads or installs anything itself.</p>
+you or your games is sent.</p>
+<figure><a href="guide-images/check-for-updates.png"><img src="guide-images/check-for-updates.png" alt="Check for Updates, when you already have the latest version." loading="lazy"></a><figcaption>Check for Updates, when you already have the latest version.</figcaption></figure>
+<figure><a href="guide-images/update-available.png"><img src="guide-images/update-available.png" alt="Update Available, with what's new in the release." loading="lazy"></a><figcaption>Update Available, with what's new in the release.</figcaption></figure>
+<p>When there's a newer version, the Update Available window shows what's new in it, and you choose how to get it:</p>
 <ul>
-  <li><b>View Release</b> opens the release's page in your web browser, with what's new and the download.</li>
+  <li><b>Install Update</b>: EmuLoader downloads the new version, checks that the download is complete and
+  undamaged, puts the new files in its folder and restarts on the new version. Your settings, games lists, favorites
+  and the rest of your data stay as they are: only the program's files are replaced. The version it replaced is kept
+  in the <code>previous-version</code> folder (only the last one), with a note saying which version it is; to go back,
+  close EmuLoader and copy those files over the ones in the program folder.</li>
+  <li><b>Download It Myself</b> opens the release's page in your web browser, with the zip. To update yourself,
+  close EmuLoader, then unzip the new version over the old one.</li>
   <li><b>Skip This Version</b>: the weekly check doesn't mention that version again (Check for Updates still does).</li>
   <li><b>Remind Me Later</b>: asked again at the next weekly check.</li>
   <li><b>Turn Off</b> (the weekly check's message only) stops the weekly check. Settings &gt; General &gt; <b>Check for
   Updates Once a Week</b> turns it on or off.</li>
 </ul>
+<p>If the update can't be installed, EmuLoader says why, changes nothing and offers the release's page instead.
+That happens when EmuLoader isn't allowed to change the files in its folder (for example under Program Files), when
+the download fails or is damaged, or when a file can't be replaced because another program has it open. Cancel stops
+the download at any time.</p>
 <p>When there's no internet connection, the weekly check says nothing and asks again at the next start. On
 Windows it uses Windows' own connection and proxy settings. The times and choices are kept in
 <code>EmuLoaderRL\EmuLoaderRL.ini</code> [EmuLoaderRL]: <code>CheckForUpdates</code>, <code>LastUpdateCheck</code> and
@@ -1499,7 +1568,8 @@ to <code>EmuLoader-ReLoaded.exe</code>.</p>
 <h3>EmuLoader closes unexpectedly</h3>
 <p>When EmuLoader closes because of an error, it writes what happened to <code>EmuLoaderRL\crash.log</code>: the
 build, the time, and where in the program it happened. Report it on the
-<a href="https://github.com/mc68k/EmuLoader-ReLoaded-Release/issues">Issues page</a> with that file, and with
+<a href="https://github.com/mc68k/EmuLoader-ReLoaded-Release/issues">Issues page</a> with that file and the
+version info (Help &gt; About &gt; Copy Version Info), and with
 <code>EmuLoaderRL\diagnostic.log</code> if Settings &gt; General &gt; Enable Diagnostic Log was on, and say what you
 were doing. The program file carries the line numbers needed to read the crash log.</p>
 <h3>Going back to the original</h3>
